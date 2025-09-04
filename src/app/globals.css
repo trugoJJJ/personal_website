@@ -4,7 +4,7 @@
 
 /* ================== GŁÓWNY BANER COOKIES ================== */
 
-/* Główny kontener banera */
+/* Główny kontener banera - zawsze light mode */
 .cky-consent-container {
   border-radius: 0 !important;
   border: 3px solid #000000 !important;
@@ -29,7 +29,6 @@
   text-transform: uppercase !important;
   letter-spacing: -0.025em !important;
   margin-bottom: 1rem !important;
-  color: #2E2217 !important;
 }
 
 /* Opis banera */
@@ -37,7 +36,6 @@
   font-size: 0.875rem !important;
   line-height: 1.6 !important;
   margin-bottom: 1.5rem !important;
-  color: #2E2217 !important;
 }
 
 /* Kontener przycisków */
@@ -68,7 +66,6 @@
   letter-spacing: 0.025em !important;
   transition: all 0.3s ease !important;
   flex: 1 !important;
-  cursor: pointer !important;
 }
 
 .cky-btn-customize:hover {
@@ -90,7 +87,6 @@
   letter-spacing: 0.025em !important;
   transition: all 0.3s ease !important;
   flex: 1 !important;
-  cursor: pointer !important;
 }
 
 .cky-btn-reject:hover {
@@ -111,7 +107,6 @@
   letter-spacing: 0.025em !important;
   transition: all 0.3s ease !important;
   flex: 1 !important;
-  cursor: pointer !important;
 }
 
 .cky-btn-accept:hover {
@@ -119,625 +114,58 @@
   transform: translateY(-2px) !important;
 }
 
-/* ================== PRZYCISK REVISIT (PREFERENCJE) ================== */
+/* ================== PRZYCISK REVISIT - CAŁKOWICIE UKRYTY ================== */
 
-/* Kontener przycisku revisit */
-.cky-btn-revisit-wrapper {
-  border-radius: 0 !important;
-  border: 3px solid #000000 !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-  transition: all 0.3s ease !important;
-  background-color: #C25A3A !important;
-  position: fixed !important;
-  bottom: 20px !important;
-  left: 20px !important;
-  z-index: 999 !important;
-}
-
-.cky-btn-revisit-wrapper:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
-}
-
-/* Przycisk revisit */
-.cky-btn-revisit {
-  background-color: #C25A3A !important;
-  border: none !important;
-  padding: 0.75rem !important;
-  transition: all 0.3s ease !important;
-  cursor: pointer !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  min-width: 40px !important;
-  min-height: 40px !important;
-}
-
-.cky-btn-revisit img {
-  width: 20px !important;
-  height: 20px !important;
-  filter: brightness(0) invert(1) !important;
-  opacity: 1 !important;
-}
-
-.cky-btn-revisit:hover {
-  background-color: #D8A23A !important;
-}
-
-/* ================== MODAL PREFERENCJI - NAPRAWIONY ================== */
-
-/* Główny modal */
-.cky-modal {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  z-index: 999999 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  padding: 1rem !important;
-  background-color: rgba(0, 0, 0, 0.5) !important;
-}
-
-/* Kontener preferencji */
-.cky-preference-center {
-  border-radius: 0 !important;
-  border: 3px solid #000000 !important;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25) !important;
-  font-family: 'Inter', sans-serif !important;
-  max-width: 800px !important;
-  width: 90vw !important;
-  max-height: 90vh !important;
-  position: relative !important;
-  z-index: 1 !important;
-  background-color: #FFFFFF !important;
-  color: #2E2217 !important;
-  overflow-y: auto !important;
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-
-/* Header modala */
-.cky-preference-header {
-  padding: 1.5rem !important;
-  border-bottom: 3px solid #000000 !important;
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  background-color: #FFFFFF !important;
-}
-
-/* Tytuł modala */
-.cky-preference-title {
-  font-weight: 800 !important;
-  font-size: 1.5rem !important;
-  line-height: 1.2 !important;
-  text-transform: uppercase !important;
-  letter-spacing: -0.025em !important;
-  color: #2E2217 !important;
-}
-
-/* Przycisk zamknięcia */
-.cky-btn-close {
-  background: none !important;
-  border: none !important;
-  padding: 0.5rem !important;
-  cursor: pointer !important;
-  transition: opacity 0.3s ease !important;
-  z-index: 10 !important;
-}
-
-.cky-btn-close:hover {
-  opacity: 0.7 !important;
-}
-
-.cky-btn-close img {
-  width: 20px !important;
-  height: 20px !important;
-  filter: invert(0) !important;
-}
-
-/* Treść modala */
-.cky-preference-content-wrapper {
-  padding: 1.5rem !important;
-  background-color: #FFFFFF !important;
-}
-
-.cky-preference-content-wrapper p {
-  font-size: 0.875rem !important;
-  line-height: 1.6 !important;
-  margin-bottom: 1rem !important;
-  color: #2E2217 !important;
-}
-
-/* Separator */
-.cky-horizontal-separator {
-  height: 3px !important;
-  background-color: #000000 !important;
-  margin: 1rem 0 !important;
-}
-
-/* ================== AKORDION KATEGORII ================== */
-
-/* Kontener akordionu */
-.cky-accordion-wrapper {
-  padding: 0 1.5rem 1.5rem !important;
-  background-color: #FFFFFF !important;
-}
-
-/* Pojedynczy akordion */
-.cky-accordion {
-  border: 2px solid #000000 !important;
-  border-radius: 0 !important;
-  margin-bottom: 1rem !important;
-  overflow: hidden !important;
-}
-
-/* Header akordionu */
-.cky-accordion-header-wrapper {
-  padding: 1rem !important;
-  background-color: #FAF6EE !important;
-  cursor: pointer !important;
-  transition: background-color 0.3s ease !important;
-  position: relative !important;
-}
-
-.cky-accordion-header-wrapper:hover {
-  background-color: #D8A23A !important;
-}
-
-/* Tytuł kategorii */
-.cky-accordion-btn {
-  background: none !important;
-  border: none !important;
-  font-weight: 700 !important;
-  font-size: 1rem !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.025em !important;
-  cursor: pointer !important;
-  width: 100% !important;
-  text-align: left !important;
-  color: #2E2217 !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-/* Opis kategorii */
-.cky-accordion-header-des p {
-  font-size: 0.75rem !important;
-  line-height: 1.5 !important;
-  margin-top: 0.5rem !important;
-  margin-bottom: 0 !important;
-  color: #2E2217 !important;
-}
-
-/* Status "Zawsze aktywne" */
-.cky-always-active {
-  font-size: 0.75rem !important;
-  font-weight: 600 !important;
-  color: #008000 !important;
-  margin-left: 1rem !important;
-}
-
-/* Chevron */
-.cky-accordion-chevron {
-  position: absolute !important;
-  right: 1rem !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  transition: transform 0.3s ease !important;
-}
-
-.cky-accordion-item[aria-expanded="true"] .cky-accordion-chevron {
-  transform: translateY(-50%) rotate(90deg) !important;
-}
-
-/* Treść akordionu */
-.cky-accordion-body {
-  padding: 1rem !important;
-  background-color: #f4f4f4 !important;
-  border-top: 1px solid #000000 !important;
-}
-
-/* Kontrola wyświetlania akordionu */
-.cky-accordion-item[aria-expanded="false"] .cky-accordion-body {
+.cky-btn-revisit-wrapper,
+.cky-revisit-bottom-left,
+[data-cky-tag="revisit-consent"] {
   display: none !important;
-}
-
-.cky-accordion-item[aria-expanded="true"] .cky-accordion-body {
-  display: block !important;
-}
-
-/* Tabela audytu */
-.cky-audit-table {
-  font-size: 0.75rem !important;
-  line-height: 1.4 !important;
-  width: 100% !important;
-  border-collapse: collapse !important;
-}
-
-.cky-audit-table th,
-.cky-audit-table td {
-  padding: 0.5rem !important;
-  border: 1px solid #ddd !important;
-  text-align: left !important;
-  color: #2E2217 !important;
-}
-
-.cky-audit-table th {
-  background-color: #f8f8f8 !important;
-  font-weight: 600 !important;
-}
-
-.cky-empty-cookies-text {
-  font-style: italic !important;
-  color: #666 !important;
-  padding: 1rem !important;
-  text-align: center !important;
-}
-
-/* ================== FOOTER MODALA ================== */
-
-/* Footer wrapper */
-.cky-footer-wrapper {
-  border-top: 3px solid #000000 !important;
-  padding: 1.5rem !important;
-  background-color: #FAF6EE !important;
-}
-
-/* Kontener przycisków footer */
-.cky-prefrence-btn-wrapper {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 0.75rem !important;
-  margin-bottom: 1rem !important;
-}
-
-@media (min-width: 640px) {
-  .cky-prefrence-btn-wrapper {
-    flex-direction: row !important;
-  }
-}
-
-/* Przyciski w footer */
-.cky-footer-wrapper .cky-btn {
-  background-color: #C25A3A !important;
-  color: #FFFFFF !important;
-  border: 3px solid #000000 !important;
-  border-radius: 0 !important;
-  padding: 0.75rem 1.5rem !important;
-  font-weight: 800 !important;
-  font-size: 0.875rem !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.025em !important;
-  transition: all 0.3s ease !important;
-  flex: 1 !important;
-  cursor: pointer !important;
-}
-
-.cky-footer-wrapper .cky-btn:hover {
-  background-color: #D8A23A !important;
-  transform: translateY(-2px) !important;
-}
-
-/* Przycisk "Odrzuć wszystkie" w footer */
-.cky-footer-wrapper .cky-btn-reject {
-  background-color: #736134 !important;
-}
-
-.cky-footer-wrapper .cky-btn-reject:hover {
-  background-color: #D8A23A !important;
-}
-
-/* ================== LINK "POKAŻ WIĘCEJ" ================== */
-
-.cky-show-desc-btn {
-  background: none !important;
-  border: none !important;
-  color: #C25A3A !important;
-  text-decoration: underline !important;
-  font-weight: 600 !important;
-  cursor: pointer !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  font-size: inherit !important;
-}
-
-.cky-show-desc-btn:hover {
-  opacity: 0.8 !important;
-}
-
-/* ================== PRZEŁĄCZNIKI (TOGGLES) ================== */
-
-.cky-slider {
-  position: relative !important;
-  width: 50px !important;
-  height: 25px !important;
-  background-color: #ccc !important;
-  border-radius: 0 !important;
-  border: 2px solid #000 !important;
-  cursor: pointer !important;
-  transition: all 0.3s ease !important;
-}
-
-.cky-slider:before {
-  position: absolute !important;
-  content: "" !important;
-  height: 19px !important;
-  width: 19px !important;
-  left: 2px !important;
-  bottom: 2px !important;
-  background-color: #000 !important;
-  transition: all 0.3s ease !important;
-}
-
-input:checked + .cky-slider {
-  background-color: #C25A3A !important;
-}
-
-input:checked + .cky-slider:before {
-  transform: translateX(25px) !important;
-  background-color: #fff !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 /* ================== UKRYCIE "POWERED BY" ================== */
 
-.cky-consent-container [data-cky-tag="powered-by"],
-.cky-modal [data-cky-tag="detail-powered-by"],
-.cky-preference-center [data-cky-tag="detail-powered-by"] {
+/* Ukrycie logo CookieYes w głównym banerze */
+.cky-consent-container [data-cky-tag="powered-by"] {
+  display: none !important;
+}
+
+/* Ukrycie logo CookieYes w modalu */
+.cky-modal [data-cky-tag="detail-powered-by"] {
   display: none !important;
 }
 
 /* ================== RESPONSYWNOŚĆ ================== */
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .cky-consent-container {
     margin: 0.5rem !important;
     border-width: 2px !important;
   }
   
-  .cky-preference-center {
-    width: 95vw !important;
-    max-width: none !important;
-  }
-  
-  .cky-modal {
-    padding: 0.5rem !important;
-    align-items: flex-start !important;
-  }
-  
-  .cky-notice-content-wrapper,
-  .cky-preference-header,
-  .cky-preference-content-wrapper,
-  .cky-accordion-wrapper,
-  .cky-footer-wrapper {
+  .cky-notice-content-wrapper {
     padding: 1rem !important;
   }
   
-  .cky-title,
-  .cky-preference-title {
+  .cky-title {
     font-size: 1.125rem !important;
   }
   
-  .cky-notice-btn-wrapper,
-  .cky-prefrence-btn-wrapper {
+  .cky-notice-btn-wrapper {
     flex-direction: column !important;
   }
 }
 
-/* ================== CUSTOM SCROLLBAR ================== */
+/* ================== ANIMACJE I TRANSITIONS ================== */
 
-.cky-modal ::-webkit-scrollbar {
-  width: 8px !important;
+/* Smooth transitions dla wszystkich elementów */
+.cky-consent-container * {
+  transition: all 0.3s ease !important;
 }
 
-.cky-modal ::-webkit-scrollbar-track {
-  background: #f1f1f1 !important;
-}
-
-.cky-modal ::-webkit-scrollbar-thumb {
-  background: #C25A3A !important;
-  border-radius: 0 !important;
-}
-
-.cky-modal ::-webkit-scrollbar-thumb:hover {
-  background: #D8A23A !important;
-}
-
-/* ================== NAPRAWKA CENTROWANIA I USUNIĘCIE SIATKI ================== */
-
-/* 1) Wyśrodkowanie panelu preferencji */
-.cky-preference-center {
-  position: fixed !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  max-width: 90vw !important;
-  max-height: 90vh !important;
-  overflow-y: auto !important;
-  z-index: 10000 !important;
-}
-
-/* 2) Usunięcie szarej siatki z tła */
-.cky-modal::before {
-  display: none !important;
-}
-
-.cky-overlay,
-.cky-preference-overlay {
-  background: none !important;
-}
-
-/* 3) Dodanie własnego tła dla modala */
-.cky-modal {
-  background: rgba(0, 0, 0, 0.5) !important;
-}
-
-/* 4) Upewnienie się, że panel jest klikalny */
-.cky-preference-center {
-  pointer-events: auto !important;
-  cursor: default !important;
-}
-
-/* 5) Usunięcie niepotrzebnych elementów tła */
-.cky-footer-shadow {
-  display: none !important;
-}
-
-/* 6) Poprawka dla responsywności */
-@media (max-width: 768px) {
-  .cky-preference-center {
-    max-width: 95vw !important;
-    max-height: 95vh !important;
-    margin: 10px !important;
-  }
-}
-
-/* ================== DODATKOWE NAPRAWKI CENTROWANIA I KLIKALNOŚCI ================== */
-
-/* 7) Wymuszenie wyśrodkowania - wyższy priorytet */
-.cky-preference-center[data-cky-tag="detail"] {
-  position: fixed !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  z-index: 2147483647 !important;
-  pointer-events: auto !important;
-}
-
-/* 8) Naprawka tła modala - usunięcie niebieskiego overlay */
-.cky-overlay {
-  background: rgba(0, 0, 0, 0.5) !important;
-  pointer-events: auto !important;
-}
-
-/* 9) Wymuszenie klikalności wszystkich elementów w panelu */
-.cky-preference-center * {
-  pointer-events: auto !important;
-}
-
-.cky-preference-center button {
-  cursor: pointer !important;
-  pointer-events: auto !important;
-}
-
-/* 10) Naprawka z-index dla całego modala */
-.cky-modal.cky-modal-open {
-  z-index: 2147483646 !important;
-  pointer-events: auto !important;
-}
-
-/* 11) Wymuszenie pozycjonowania dla aktywnego modala */
-.cky-modal.cky-modal-open .cky-preference-center {
-  position: fixed !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  z-index: 2147483647 !important;
-}
-
-/* 12) Usunięcie niebieskiego tła z overlay */
-.cky-overlay[style*="background"] {
-  background: rgba(0, 0, 0, 0.5) !important;
-}
-
-/* 13) Wymuszenie wyśrodkowania dla wszystkich wariantów */
-.cky-preference-center,
-.cky-preference-center[style*="position"],
-.cky-preference-center[style*="top"],
-.cky-preference-center[style*="left"] {
-  position: fixed !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  z-index: 2147483647 !important;
-}
-
-/* ================== AGRESYWNE WYMUSZENIE CENTROWANIA ================== */
-
-/* 14) Wymuszenie centrowania z najwyższym priorytetem */
-.cky-preference-center,
-.cky-preference-center[data-cky-tag="detail"],
-.cky-preference-center[style*="position"],
-.cky-preference-center[style*="top"],
-.cky-preference-center[style*="left"],
-.cky-preference-center[style*="transform"] {
-  position: fixed !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  z-index: 2147483647 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* 15) Wymuszenie centrowania dla wszystkich wariantów modala */
-.cky-modal .cky-preference-center,
-.cky-modal[class*="open"] .cky-preference-center,
-.cky-modal[style*="display"] .cky-preference-center {
-  position: fixed !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  z-index: 2147483647 !important;
-}
-
-/* 16) Wymuszenie centrowania dla aktywnego panelu */
-.cky-preference-center[aria-modal="true"],
-.cky-preference-center[role="dialog"] {
-  position: fixed !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  z-index: 2147483647 !important;
-}
-
-/* 17) Resetowanie wszystkich pozycji inline */
-.cky-preference-center[style*="position: absolute"],
-.cky-preference-center[style*="position:relative"],
-.cky-preference-center[style*="position: static"] {
-  position: fixed !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-}
-
-/* 18) Wymuszenie centrowania dla wszystkich możliwych selektorów */
-div.cky-preference-center,
-div[class*="cky-preference"],
-div[data-cky-tag="detail"] {
-  position: fixed !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  z-index: 2147483647 !important;
-}
-
-/* 19) Usunięcie wszystkich inline styles które mogą przeszkadzać */
-.cky-preference-center[style*="top:"] {
-  top: 50% !important;
-}
-
-.cky-preference-center[style*="left:"] {
-  left: 50% !important;
-}
-
-.cky-preference-center[style*="transform:"] {
-  transform: translate(-50%, -50%) !important;
-}
-
-/* 20) Wymuszenie centrowania z !important dla wszystkich właściwości */
-.cky-preference-center {
-  position: fixed !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  z-index: 2147483647 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  float: none !important;
-  clear: both !important;
+/* Hover effects */
+.cky-btn:hover {
+  transform: translateY(-2px) !important;
 }
