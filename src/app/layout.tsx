@@ -1,7 +1,16 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
 import { Providers } from "@/components/Providers";
 import { LoadingProvider } from "@/components/LoadingProvider";
 import ScrollToTop from "@/components/ScrollToTop";
-import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "Adam Gałecki - Specjalista SEO & SEM",
+  description: "Profesjonalne usługi SEO, SEM i analityki. Zwiększ widoczność swojej strony w wyszukiwarkach.",
+};
 
 export default function RootLayout({
   children,
@@ -11,6 +20,38 @@ export default function RootLayout({
   return (
     <html lang="pl" suppressHydrationWarning>
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  const urlParams = new URLSearchParams(window.location.search);
+                  const theme = urlParams.get('theme');
+                  
+                  if (theme === 'dark' || theme === 'light') {
+                    // Wyczyść localStorage
+                    localStorage.removeItem('theme-preference');
+                    
+                    // Ustaw motyw na HTML
+                    document.documentElement.classList.remove('light', 'dark');
+                    document.documentElement.classList.add(theme);
+                    
+                    // Usuń parametr z URL
+                    urlParams.delete('theme');
+                    const newUrl = window.location.pathname + 
+                      (urlParams.toString() ? '?' + urlParams.toString() : '');
+                    
+                    if (window.history && window.history.replaceState) {
+                      window.history.replaceState(null, '', newUrl);
+                    }
+                  }
+                } catch (e) {
+                  console.error('Theme script error:', e);
+                }
+              })();
+            `,
+          }}
+        />
         <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" />
         <link rel="shortcut icon" href="/favicon.svg?v=2" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/favicon.svg?v=2" />
@@ -32,7 +73,7 @@ export default function RootLayout({
         <meta name="twitter:description" content="Zajmuję się kompleksową obsługą komunikacji marketingowej nakierowanej na osiąganie zamierzonych celów biznesowych w firmach B2B i B2C." />
         <meta name="twitter:image" content="/og_cover.png" />
       </head>
-      <body>
+      <body className={inter.className}>
         <LoadingProvider>
           <Providers>
             {children}
