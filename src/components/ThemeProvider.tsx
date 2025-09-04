@@ -8,7 +8,7 @@ const ThemeProviderContent = ({ children }: { children: React.ReactNode }) => {
   return (
     <NextThemeProvider 
       attribute="class" 
-      defaultTheme="light" 
+      defaultTheme={undefined}
       enableSystem={false}
       storageKey="theme-preference"
     >
