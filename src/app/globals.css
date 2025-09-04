@@ -588,21 +588,9 @@
 /* ================== SILNE NADPISANIA COOKIEYES ================== */
 /* Główny baner cookies - bez dark mode (zostawiamy domyślne style CookieYes) */
 /* Przyciski głównego banera - bez dark mode, domyślne style CookieYes */
-body.dark .cky-preference-center, html.dark .cky-preference-center { background-color: #0B0B10 !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
-body.dark .cky-preference-header, html.dark .cky-preference-header { color: #FFFFFF !important; border-bottom-color: #FFFFFF !important; }
-body.dark .cky-preference-title, html.dark .cky-preference-title { color: #FFFFFF !important; }
-body.dark .cky-preference-content-wrapper, html.dark .cky-preference-content-wrapper { color: #FFFFFF !important; }
-body.dark .cky-accordion-header-wrapper, html.dark .cky-accordion-header-wrapper { background-color: #241b2b !important; color: #FFFFFF !important; }
-body.dark .cky-accordion-btn, html.dark .cky-accordion-btn { color: #FFFFFF !important; }
-body.dark .cky-accordion-header-des p, html.dark .cky-accordion-header-des p { color: #FFFFFF !important; }
+/* Panel preferencji - bez dark mode, domyślne style CookieYes */
 /* Stare style ikonki usunięte - zastąpione nowymi */
-body.dark .cky-modal *, html.dark .cky-modal * { color: #FFFFFF !important; }
-body.dark .cky-footer-wrapper, html.dark .cky-footer-wrapper { background-color: #241b2b !important; border-top-color: #FFFFFF !important; }
-body.dark .cky-horizontal-separator, html.dark .cky-horizontal-separator { background-color: #FFFFFF !important; }
-body.dark .cky-accordion-body, html.dark .cky-accordion-body { background-color: #2a2a2a !important; border-top-color: #FFFFFF !important; }
-body.dark .cky-audit-table, html.dark .cky-audit-table { background-color: #2a2a2a !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
-body.dark .cky-footer-wrapper .cky-btn, html.dark .cky-footer-wrapper .cky-btn { background-color: #C25A3A !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
-body.dark .cky-footer-wrapper .cky-btn-reject, html.dark .cky-footer-wrapper .cky-btn-reject { background-color: #736134 !important; }
+/* Modal i footer - bez dark mode, domyślne style CookieYes */
 /* ================== NAPRAWKA PRZYCISKU REVISIT ================== */
 body:not(.dark) .cky-btn-revisit-wrapper, html:not(.dark) .cky-btn-revisit-wrapper { background-color: #C25A3A !important; }
 body:not(.dark) .cky-btn-revisit, html:not(.dark) .cky-btn-revisit { background-color: #C25A3A !important; }
@@ -610,19 +598,7 @@ body:not(.dark) .cky-btn-revisit, html:not(.dark) .cky-btn-revisit { background-
 .cky-btn-close { cursor: pointer !important; pointer-events: auto !important; z-index: 10001 !important; }
 .cky-btn-close { cursor: pointer !important; z-index: 10001 !important; }
 /* ================== NAPRAWKA TŁA MODALA W DARK MODE ================== */
-body.dark .cky-preference-center[style*="background-color: #FFFFFF"], html.dark .cky-preference-center[style*="background-color: #FFFFFF"] { background-color: #0B0B10 !important; }
-body.dark .cky-preference-center[style*="background-color: #ffffff"], html.dark .cky-preference-center[style*="background-color: #ffffff"] { background-color: #0B0B10 !important; }
-body.dark .cky-preference-center[style*="color: #212121"], html.dark .cky-preference-center[style*="color: #212121"] { color: #FFFFFF !important; }
-body.dark .cky-preference-center[style*="color: #212121"] *, html.dark .cky-preference-center[style*="color: #212121"] * { color: #FFFFFF !important; }
-body.dark .cky-preference-header[style*="color: #212121"], html.dark .cky-preference-header[style*="color: #212121"] { color: #FFFFFF !important; }
-body.dark .cky-preference-title[style*="color: #212121"], html.dark .cky-preference-title[style*="color: #212121"] { color: #FFFFFF !important; }
-body.dark .cky-preference-content-wrapper[style*="color: #212121"], html.dark .cky-preference-content-wrapper[style*="color: #212121"] { color: #FFFFFF !important; }
-body.dark .cky-accordion-btn[style*="color: #212121"], html.dark .cky-accordion-btn[style*="color: #212121"] { color: #FFFFFF !important; }
-body.dark .cky-accordion-header-des[style*="color: #212121"], html.dark .cky-accordion-header-des[style*="color: #212121"] { color: #FFFFFF !important; }
-body.dark .cky-audit-table[style*="color: #212121"], html.dark .cky-audit-table[style*="color: #212121"] { background-color: #2a2a2a !important; color: #FFFFFF !important; }
-body.dark .cky-footer-wrapper[style*="background: linear-gradient"], html.dark .cky-footer-wrapper[style*="background: linear-gradient"] { background: #241b2b !important; }
-body.dark .cky-footer-wrapper button[style*="background-color: #1863dc"], html.dark .cky-footer-wrapper button[style*="background-color: #1863dc"] { background-color: #C25A3A !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
-body.dark .cky-footer-wrapper .cky-btn-reject[style*="background-color: #1863dc"], html.dark .cky-footer-wrapper .cky-btn-reject[style*="background-color: #1863dc"] { background-color: #736134 !important; }
+/* Wszystkie elementy panelu preferencji - bez dark mode, domyślne style CookieYes */
 /* Stare style klikalności usunięte - zastąpione bezpiecznymi */
 /* Stare style z-index usunięte - zastąpione bezpiecznymi */
 /* Stare style revisit usunięte - zastąpione nowymi */
@@ -640,15 +616,12 @@ body.dark .cky-footer-wrapper .cky-btn-reject[style*="background-color: #1863dc"
 html.cky-modal-open .site-header, html.cky-modal-open .sticky, html.cky-modal-open [style*="position:fixed"] { pointer-events: none !important; }
 /* Zapobieganie nowym stacking contextom nad modalem */
 .site-header, .sticky { transform: none !important; filter: none !important; perspective: none !important; }
-/* Dark mode panel (czarne tło + białe teksty) */
-html.dark .cky-preference-center, body.dark .cky-preference-center { background: #0B0B10 !important; color: #FFFFFF !important; }
-html.dark .cky-preference-center *, body.dark .cky-preference-center * { color: #FFFFFF !important; border-color: #FFFFFF33 !important; }
+/* Panel preferencji - bez dark mode, domyślne style CookieYes */
 /* Revisit — tło i równy "stroke" */
 :root { --brand-orange: #C25A3A; --dark-bg: #0B0B10; }
 /* Light: ciemniejszy pomarańcz z palety */
 .cky-btn-revisit { background: var(--brand-orange) !important; border: 2px solid currentColor !important; border-radius: 8px !important; }
-/* Dark: ciemne tło */
-html.dark .cky-btn-revisit, body.dark .cky-btn-revisit { background: var(--dark-bg) !important; }
+/* Dark: bez dark mode, domyślne style CookieYes */
 /* Ikonka: biała w obu trybach */
 .cky-btn-revisit img { filter: brightness(0) invert(1) !important; }
 /* 5) Najczęstsza przyczyna "nie-klikania" */
@@ -678,3 +651,22 @@ html.dark .cky-btn-revisit, body.dark .cky-btn-revisit { background: var(--dark-
 /* 4) Usunięcie podwójnego stroke z revisit button */
 .cky-btn-revisit-wrapper { border: none !important; outline: none !important; box-shadow: none !important; }
 .cky-btn-revisit { border: 2px solid currentColor !important; outline: none !important; box-shadow: none !important; }
+/* ================== CAŁKOWITE USUNIĘCIE DARK MODE I REVISIT ================== */
+/* 1) Całkowite usunięcie dark mode z całego banera i jego elementów */
+/* Wymuszamy domyślne style CookieYes dla wszystkich elementów banera */
+body.dark .cky-consent-container, html.dark .cky-consent-container, .dark .cky-consent-container { background-color: #FFFFFF !important; color: #212121 !important; border-color: #F4F4F4 !important; }
+body.dark .cky-notice-content-wrapper, html.dark .cky-notice-content-wrapper, .dark .cky-notice-content-wrapper { color: #212121 !important; }
+body.dark .cky-title, html.dark .cky-title, .dark .cky-title { color: #212121 !important; }
+body.dark .cky-notice-des p, html.dark .cky-notice-des p, .dark .cky-notice-des p { color: #212121 !important; }
+body.dark .cky-btn-customize, html.dark .cky-btn-customize, .dark .cky-btn-customize { background-color: transparent !important; color: #1863dc !important; border-color: #1863dc !important; }
+body.dark .cky-btn-reject, html.dark .cky-btn-reject, .dark .cky-btn-reject { background-color: #1863dc !important; color: #FFFFFF !important; border-color: #1863dc !important; }
+body.dark .cky-btn-accept, html.dark .cky-btn-accept, .dark .cky-btn-accept { background-color: #1863dc !important; color: #FFFFFF !important; border-color: #1863dc !important; }
+/* 2) Całkowite zablokowanie wyświetlania elementu revisit */
+.cky-btn-revisit-wrapper, .cky-revisit-bottom-left, [data-cky-tag="revisit-consent"] { display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important; }
+/* 3) Usunięcie wszystkich pozostałych style dark mode dla banera */
+/* Wymuszamy domyślne style dla wszystkich elementów banera w dark mode */
+body.dark .cky-consent-bar, html.dark .cky-consent-bar, .dark .cky-consent-bar { border-color: #f4f4f4 !important; background-color: #FFFFFF !important; }
+body.dark .cky-notice, html.dark .cky-notice, .dark .cky-notice { color: #212121 !important; }
+body.dark .cky-notice-group, html.dark .cky-notice-group, .dark .cky-notice-group { color: #212121 !important; }
+body.dark .cky-notice-btn-wrapper, html.dark .cky-notice-btn-wrapper, .dark .cky-notice-btn-wrapper { color: #212121 !important; }
+body.dark [data-cky-tag="powered-by"], html.dark [data-cky-tag="powered-by"], .dark [data-cky-tag="powered-by"] { color: #212121 !important; background-color: transparent !important; }
