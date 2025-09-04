@@ -137,6 +137,29 @@
   display: none !important;
 }
 
+/* ================== STYLOWANIE PRZYCISKÓW W FOOTER MODALA ================== */
+
+/* Przycisk "Zapisz" w footer - spójny z innymi przyciskami */
+.cky-footer-wrapper .cky-btn-preferences {
+  background-color: #C25A3A !important;
+  color: #FFFFFF !important;
+  border: 3px solid #000000 !important;
+  border-radius: 0 !important;
+  padding: 0.75rem 1.5rem !important;
+  font-weight: 800 !important;
+  font-size: 0.875rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.025em !important;
+  transition: all 0.3s ease !important;
+  flex: 1 !important;
+  cursor: pointer !important;
+}
+
+.cky-footer-wrapper .cky-btn-preferences:hover {
+  background-color: #D8A23A !important;
+  transform: translateY(-2px) !important;
+}
+
 /* ================== RESPONSYWNOŚĆ ================== */
 
 @media (max-width: 640px) {
