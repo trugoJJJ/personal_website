@@ -584,25 +584,10 @@
 .cky-modal ::-webkit-scrollbar-thumb:hover {
   background: #D8A23A !important;
 }
-/* Dodatkowe stylowanie dark mode */
-.dark .cky-consent-container { background-color: #0B0B10 !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
-.dark .cky-preference-content-wrapper { color: #FFFFFF !important; }
-.dark .cky-accordion-header-wrapper { background-color: #241b2b !important; color: #FFFFFF !important; }
-.dark .cky-accordion-btn { color: #FFFFFF !important; }
-.dark .cky-accordion-header-des p { color: #FFFFFF !important; }
-.dark .cky-preference-title { color: #FFFFFF !important; }
-.dark .cky-preference-header { color: #FFFFFF !important; }
-.dark .cky-notice-content-wrapper { color: #FFFFFF !important; }
-.dark .cky-title { color: #FFFFFF !important; }
-.dark .cky-notice-des p { color: #FFFFFF !important; }
-.dark .cky-btn-customize { background-color: #0B0B10 !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
-.dark .cky-btn-reject { background-color: #736134 !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
-.dark .cky-btn-accept { background-color: #C25A3A !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
+/* Główny baner cookies - bez dark mode, domyślne style CookieYes */
 /* ================== SILNE NADPISANIA COOKIEYES ================== */
 /* Główny baner cookies - bez dark mode (zostawiamy domyślne style CookieYes) */
-body.dark .cky-btn-customize, html.dark .cky-btn-customize { background-color: #0B0B10 !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
-body.dark .cky-btn-reject, html.dark .cky-btn-reject { background-color: #736134 !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
-body.dark .cky-btn-accept, html.dark .cky-btn-accept { background-color: #C25A3A !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
+/* Przyciski głównego banera - bez dark mode, domyślne style CookieYes */
 body.dark .cky-preference-center, html.dark .cky-preference-center { background-color: #0B0B10 !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
 body.dark .cky-preference-header, html.dark .cky-preference-header { color: #FFFFFF !important; border-bottom-color: #FFFFFF !important; }
 body.dark .cky-preference-title, html.dark .cky-preference-title { color: #FFFFFF !important; }
@@ -676,8 +661,8 @@ html.dark .cky-btn-revisit, body.dark .cky-btn-revisit { background: var(--dark-
 /* Usuwamy stare style które mogły powodować konflikty */
 /* Nadpisujemy tylko to co konieczne, bez "rycia w klikach" */
 /* ================== NAPRAWKA WYŚRODKOWANIA I STYLOWANIA ================== */
-/* 1) Wyśrodkowanie preferencji */
-.cky-preference-center { display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; text-align: center !important; }
+/* 1) Wyśrodkowanie preferencji względem całej strony */
+.cky-preference-center { position: fixed !important; top: 50% !important; left: 50% !important; transform: translate(-50%, -50%) !important; max-width: 90vw !important; max-height: 90vh !important; overflow-y: auto !important; display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; text-align: center !important; }
 .cky-preference-center * { text-align: center !important; }
 /* 2) Główny baner cookies - bez dark mode (zostawiamy domyślne) */
 /* Usuwamy dark mode dla głównego banera - zostawiamy domyślne style CookieYes */
@@ -685,8 +670,11 @@ html.dark .cky-btn-revisit, body.dark .cky-btn-revisit { background: var(--dark-
 .cky-btn-revisit-wrapper { display: flex !important; align-items: center !important; justify-content: center !important; width: auto !important; height: auto !important; }
 .cky-btn-revisit { display: flex !important; align-items: center !important; justify-content: center !important; width: 40px !important; height: 40px !important; padding: 0 !important; margin: 0 !important; }
 .cky-btn-revisit img { width: 20px !important; height: 20px !important; margin: 0 !important; padding: 0 !important; }
-/* 4) Ikonka SVG - biała w obu trybach */
+/* Usunięte duplikaty - zastąpione nowymi stylami */
+/* 2) Wyłączenie dark mode z głównego banera - zostawiamy domyślne style */
+/* Główny baner cookies - bez dark mode, domyślne style CookieYes */
+/* 3) Biała ikonka revisit niezależnie od trybu */
 .cky-btn-revisit img { filter: brightness(0) invert(1) !important; }
-/* Usuwamy stare style które mogły powodować problemy */
-/* Usuwamy stare style dark mode dla głównego banera */
-/* Usuwamy stare style ikonki które mogły powodować problemy */
+/* 4) Usunięcie podwójnego stroke z revisit button */
+.cky-btn-revisit-wrapper { border: none !important; outline: none !important; box-shadow: none !important; }
+.cky-btn-revisit { border: 2px solid currentColor !important; outline: none !important; box-shadow: none !important; }
