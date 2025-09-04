@@ -47,17 +47,32 @@ const LanguageSwitchContent = () => {
 
   // Generate English version URL based on current path
   const getEnglishUrl = () => {
-    console.log('getEnglishUrl called!'); // Debug log
+    console.log('=== DEBUG: getEnglishUrl called! ===');
+    console.log('Current pathname:', pathname);
+    console.log('Current URL:', typeof window !== "undefined" ? window.location.href : 'no window');
+    console.log('User agent:', typeof window !== "undefined" ? navigator.userAgent : 'no window');
+    
     try {
-      if (!pathname) return 'https://galecki.site/';
-      
-      if (pathname === "/") return 'https://galecki.site/';
-      if (pathname === "/polityka-prywatnosci") return 'https://galecki.site/privacy-policy';
-      if (pathname.startsWith("/portfolio/")) {
-        return `https://galecki.site${pathname}`;
+      if (!pathname) {
+        console.log('No pathname, returning default URL');
+        return 'https://galecki.site/';
       }
-      return 'https://galecki.site/';
+      
+      let result = '';
+      if (pathname === "/") {
+        result = 'https://galecki.site/';
+      } else if (pathname === "/polityka-prywatnosci") {
+        result = 'https://galecki.site/privacy-policy';
+      } else if (pathname.startsWith("/portfolio/")) {
+        result = `https://galecki.site${pathname}`;
+      } else {
+        result = 'https://galecki.site/';
+      }
+      
+      console.log('Generated URL:', result);
+      return result;
     } catch (error) {
+      console.error('Error in getEnglishUrl:', error);
       // Fallback to main page if there's any error
       return 'https://galecki.site/';
     }
@@ -126,6 +141,7 @@ const LanguageSwitchContent = () => {
           (e.currentTarget as HTMLButtonElement).style.border = `${isDark ? '1px' : '3px'} solid ${isDark ? PALETTE.white : PALETTE.black}`;
         }}
         onMouseLeave={(e) => {
+          (e.currentTarget as HTMLButtonElement).style.background = baseStyle.background as string;
           (e.currentTarget as HTMLButtonElement).style.color = baseStyle.color as string;
           (e.currentTarget as HTMLButtonElement).style.border = baseStyle.border as string;
         }}
