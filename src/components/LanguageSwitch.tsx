@@ -47,6 +47,7 @@ const LanguageSwitchContent = () => {
 
   // Generate English version URL based on current path
   const getEnglishUrl = () => {
+    console.log('getEnglishUrl called!'); // Debug log
     try {
       if (!pathname) return 'https://galecki.site/';
       
@@ -125,7 +126,6 @@ const LanguageSwitchContent = () => {
           (e.currentTarget as HTMLButtonElement).style.border = `${isDark ? '1px' : '3px'} solid ${isDark ? PALETTE.white : PALETTE.black}`;
         }}
         onMouseLeave={(e) => {
-          (e.currentTarget as HTMLButtonElement).style.background = baseStyle.background as string;
           (e.currentTarget as HTMLButtonElement).style.color = baseStyle.color as string;
           (e.currentTarget as HTMLButtonElement).style.border = baseStyle.border as string;
         }}
