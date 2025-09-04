@@ -15,7 +15,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" />
         <link rel="shortcut icon" href="/favicon.svg?v=2" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/favicon.svg?v=2" />
-        <link rel="alternate" hreflang="en" href="https://galecki.website" />
+        <link rel="alternate" hrefLang="en" href="https://galecki.website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta httpEquiv="Pragma" content="no-cache" />
