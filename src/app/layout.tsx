@@ -42,13 +42,13 @@ export default function RootLayout({
         <meta name="twitter:title" content="Portfolio – Adam Gałęcki – Digital Marketing Manager" />
         <meta name="twitter:description" content="Zajmuję się kompleksową obsługą komunikacji marketingowej nakierowanej na osiąganie zamierzonych celów biznesowych w firmach B2B i B2C." />
         <meta name="twitter:image" content="/og_cover.png" />
+        <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/e1fcebeaaeac176f12c58282/script.js"></script>
       </head>
       <body className={inter.className} suppressHydrationWarning>
         <LoadingProvider>
           <Providers>
             {children}
             <ScrollToTop />
-            <CookieBanner />
           </Providers>
         </LoadingProvider>
       </body>
