@@ -1,1 +1,196 @@
 @import '../index.css';
+
+/* ================== CUSTOMIZACJA BANERA COOKIEYES ================== */
+
+/* Ukrycie logo CookieYes */
+#cookieyes-banner .cy-logo,
+#cookieyes-banner .cy-logo-container {
+  display: none !important;
+}
+
+/* Główny kontener banera */
+#cookieyes-banner {
+  border-radius: 0 !important; /* Kanciaste rogi */
+  border: 3px solid #000000 !important; /* Gruby stroke */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* Light mode */
+#cookieyes-banner {
+  background-color: #FFFFFF !important;
+  color: #2E2217 !important;
+}
+
+/* Dark mode */
+.dark #cookieyes-banner {
+  background-color: #0B0B10 !important;
+  color: #FFFFFF !important;
+  border-color: #FFFFFF !important;
+}
+
+/* Nagłówek banera */
+#cookieyes-banner .cy-banner-header {
+  border-bottom: 3px solid #000000 !important;
+  padding: 1.5rem !important;
+}
+
+.dark #cookieyes-banner .cy-banner-header {
+  border-bottom-color: #FFFFFF !important;
+}
+
+#cookieyes-banner .cy-banner-title {
+  font-weight: 800 !important;
+  font-size: 1.25rem !important;
+  line-height: 1.2 !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.025em !important;
+}
+
+#cookieyes-banner .cy-banner-description {
+  font-size: 0.875rem !important;
+  line-height: 1.5 !important;
+  margin-top: 0.5rem !important;
+}
+
+/* Treść banera */
+#cookieyes-banner .cy-banner-content {
+  padding: 1.5rem !important;
+}
+
+#cookieyes-banner .cy-banner-text {
+  font-size: 0.875rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Przyciski */
+#cookieyes-banner .cy-banner-buttons {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.75rem !important;
+  padding: 1.5rem !important;
+  border-top: 3px solid #000000 !important;
+}
+
+.dark #cookieyes-banner .cy-banner-buttons {
+  border-top-color: #FFFFFF !important;
+}
+
+@media (min-width: 640px) {
+  #cookieyes-banner .cy-banner-buttons {
+    flex-direction: row !important;
+  }
+}
+
+/* Przycisk "Tylko niezbędne" */
+#cookieyes-banner .cy-btn-secondary {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+  border: 3px solid #000000 !important;
+  border-radius: 0 !important;
+  padding: 0.75rem 1.5rem !important;
+  font-weight: 800 !important;
+  font-size: 0.875rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.025em !important;
+  transition: all 0.3s ease !important;
+  flex: 1 !important;
+}
+
+.dark #cookieyes-banner .cy-btn-secondary {
+  background-color: #0B0B10 !important;
+  color: #FFFFFF !important;
+  border-color: #FFFFFF !important;
+}
+
+#cookieyes-banner .cy-btn-secondary:hover {
+  background-color: #736134 !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Przycisk "Akceptuj wszystkie" */
+#cookieyes-banner .cy-btn-primary {
+  background-color: #C25A3A !important;
+  color: #FFFFFF !important;
+  border: 3px solid #000000 !important;
+  border-radius: 0 !important;
+  padding: 0.75rem 1.5rem !important;
+  font-weight: 800 !important;
+  font-size: 0.875rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.025em !important;
+  transition: all 0.3s ease !important;
+  flex: 1 !important;
+}
+
+.dark #cookieyes-banner .cy-btn-primary {
+  border-color: #FFFFFF !important;
+}
+
+#cookieyes-banner .cy-btn-primary:hover {
+  background-color: #D8A23A !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Linki w banerze */
+#cookieyes-banner .cy-banner-link {
+  color: #C25A3A !important;
+  text-decoration: underline !important;
+  font-weight: 600 !important;
+}
+
+.dark #cookieyes-banner .cy-banner-link {
+  color: #6B2D5B !important;
+}
+
+#cookieyes-banner .cy-banner-link:hover {
+  opacity: 0.8 !important;
+}
+
+/* Responsywność */
+@media (max-width: 640px) {
+  #cookieyes-banner {
+    margin: 1rem !important;
+    border-width: 2px !important;
+  }
+  
+  #cookieyes-banner .cy-banner-header,
+  #cookieyes-banner .cy-banner-content,
+  #cookieyes-banner .cy-banner-buttons {
+    padding: 1rem !important;
+  }
+  
+  #cookieyes-banner .cy-banner-title {
+    font-size: 1.125rem !important;
+  }
+}
+
+/* Ukrycie domyślnych animacji CookieYes */
+#cookieyes-banner * {
+  animation: none !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Custom scrollbar dla banera */
+#cookieyes-banner ::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+#cookieyes-banner ::-webkit-scrollbar-track {
+  background: #f1f1f1 !important;
+}
+
+.dark #cookieyes-banner ::-webkit-scrollbar-track {
+  background: #2a2a2a !important;
+}
+
+#cookieyes-banner ::-webkit-scrollbar-thumb {
+  background: #C25A3A !important;
+  border-radius: 0 !important;
+}
+
+#cookieyes-banner ::-webkit-scrollbar-thumb:hover {
+  background: #D8A23A !important;
+}
