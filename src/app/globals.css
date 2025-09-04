@@ -655,3 +655,89 @@ input:checked + .cky-slider:before {
   transform: translate(-50%, -50%) !important;
   z-index: 2147483647 !important;
 }
+
+/* ================== AGRESYWNE WYMUSZENIE CENTROWANIA ================== */
+
+/* 14) Wymuszenie centrowania z najwyższym priorytetem */
+.cky-preference-center,
+.cky-preference-center[data-cky-tag="detail"],
+.cky-preference-center[style*="position"],
+.cky-preference-center[style*="top"],
+.cky-preference-center[style*="left"],
+.cky-preference-center[style*="transform"] {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 2147483647 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* 15) Wymuszenie centrowania dla wszystkich wariantów modala */
+.cky-modal .cky-preference-center,
+.cky-modal[class*="open"] .cky-preference-center,
+.cky-modal[style*="display"] .cky-preference-center {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 2147483647 !important;
+}
+
+/* 16) Wymuszenie centrowania dla aktywnego panelu */
+.cky-preference-center[aria-modal="true"],
+.cky-preference-center[role="dialog"] {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 2147483647 !important;
+}
+
+/* 17) Resetowanie wszystkich pozycji inline */
+.cky-preference-center[style*="position: absolute"],
+.cky-preference-center[style*="position:relative"],
+.cky-preference-center[style*="position: static"] {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+/* 18) Wymuszenie centrowania dla wszystkich możliwych selektorów */
+div.cky-preference-center,
+div[class*="cky-preference"],
+div[data-cky-tag="detail"] {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 2147483647 !important;
+}
+
+/* 19) Usunięcie wszystkich inline styles które mogą przeszkadzać */
+.cky-preference-center[style*="top:"] {
+  top: 50% !important;
+}
+
+.cky-preference-center[style*="left:"] {
+  left: 50% !important;
+}
+
+.cky-preference-center[style*="transform:"] {
+  transform: translate(-50%, -50%) !important;
+}
+
+/* 20) Wymuszenie centrowania z !important dla wszystkich właściwości */
+.cky-preference-center {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 2147483647 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+  clear: both !important;
+}
