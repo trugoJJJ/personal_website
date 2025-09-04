@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useMemo, useState, ReactNode } from "react";
 
-export type Locale = "pl" | "en";
+export type Locale = "pl";
 
 type Dict = Record<string, string>;
 
@@ -46,41 +46,7 @@ const PL: Dict = {
   "articles.newsletter.cta": "Zapisz się do newslettera",
 };
 
-const EN: Dict = {
-  "nav.portfolio": "Portfolio",
-  "nav.about": "About",
-  "nav.experience": "Experience",
-  "nav.skills": "Skills",
-  "nav.articles": "Articles",
-  "nav.contact": "Contact",
-  "nav.menu": "Menu",
-
-  "hero.placeholder": "Rive animation placeholder",
-
-  "portfolio.combined.title": "Selected projects and visual portfolio",
-  "portfolio.combined.subtitle": "Browse the work — filter by category.",
-  "portfolio.cta.more": "VIEW MORE WORK",
-
-  "filters.animations": "Animations",
-  "filters.design": "Design",
-  "filters.team": "Team management",
-  "filters.campaigns": "Advertising campaigns",
-
-  "about.tabs.about": "About me",
-  "about.tabs.education": "Education & Certificates",
-  "about.tabs.experience": "Experience",
-  "about.tabs.skills": "Skills & Tech Stack",
-  "about.cv": "DOWNLOAD CV",
-
-  "articles.title": "Latest Articles",
-  "articles.subtitle": "I share knowledge and insights from digital marketing. Practical tips, case studies and trends worth knowing.",
-  "articles.readMore": "Read more",
-  "articles.viewAll": "View all articles",
-  "articles.newsletter.title": "Stay up to date",
-  "articles.newsletter.cta": "Subscribe to newsletter",
-};
-
-const DICTS: Record<Locale, Dict> = { pl: PL, en: EN };
+const DICTS: Record<Locale, Dict> = { pl: PL };
 
 const I18nContext = createContext<I18nContextType | null>(null);
 
