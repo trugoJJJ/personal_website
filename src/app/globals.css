@@ -6,25 +6,14 @@
 
 /* Główny kontener banera */
 .cky-consent-container {
-  border-radius: 0 !important; /* Kanciaste rogi */
-  border: 3px solid #000000 !important; /* Gruby stroke */
+  border-radius: 0 !important;
+  border: 3px solid #000000 !important;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
   font-family: 'Inter', sans-serif !important;
   max-width: 90vw !important;
   margin: 1rem !important;
-}
-
-/* Light mode - główny baner */
-.cky-consent-container {
   background-color: #FFFFFF !important;
   color: #2E2217 !important;
-}
-
-/* Dark mode - główny baner */
-.dark .cky-consent-container {
-  background-color: #0B0B10 !important;
-  color: #FFFFFF !important;
-  border-color: #FFFFFF !important;
 }
 
 /* Treść banera */
@@ -40,6 +29,7 @@
   text-transform: uppercase !important;
   letter-spacing: -0.025em !important;
   margin-bottom: 1rem !important;
+  color: #2E2217 !important;
 }
 
 /* Opis banera */
@@ -47,6 +37,7 @@
   font-size: 0.875rem !important;
   line-height: 1.6 !important;
   margin-bottom: 1.5rem !important;
+  color: #2E2217 !important;
 }
 
 /* Kontener przycisków */
@@ -56,10 +47,6 @@
   gap: 0.75rem !important;
   padding-top: 1.5rem !important;
   border-top: 3px solid #000000 !important;
-}
-
-.dark .cky-notice-btn-wrapper {
-  border-top-color: #FFFFFF !important;
 }
 
 @media (min-width: 640px) {
@@ -81,12 +68,7 @@
   letter-spacing: 0.025em !important;
   transition: all 0.3s ease !important;
   flex: 1 !important;
-}
-
-.dark .cky-btn-customize {
-  background-color: #0B0B10 !important;
-  color: #FFFFFF !important;
-  border-color: #FFFFFF !important;
+  cursor: pointer !important;
 }
 
 .cky-btn-customize:hover {
@@ -108,10 +90,7 @@
   letter-spacing: 0.025em !important;
   transition: all 0.3s ease !important;
   flex: 1 !important;
-}
-
-.dark .cky-btn-reject {
-  border-color: #FFFFFF !important;
+  cursor: pointer !important;
 }
 
 .cky-btn-reject:hover {
@@ -132,10 +111,7 @@
   letter-spacing: 0.025em !important;
   transition: all 0.3s ease !important;
   flex: 1 !important;
-}
-
-.dark .cky-btn-accept {
-  border-color: #FFFFFF !important;
+  cursor: pointer !important;
 }
 
 .cky-btn-accept:hover {
@@ -151,16 +127,11 @@
   border: 3px solid #000000 !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
   transition: all 0.3s ease !important;
-  background-color: #FFFFFF !important;
+  background-color: #C25A3A !important;
   position: fixed !important;
   bottom: 20px !important;
   left: 20px !important;
   z-index: 999 !important;
-}
-
-.dark .cky-btn-revisit-wrapper {
-  border-color: #FFFFFF !important;
-  background-color: #0B0B10 !important;
 }
 
 .cky-btn-revisit-wrapper:hover {
@@ -170,7 +141,7 @@
 
 /* Przycisk revisit */
 .cky-btn-revisit {
-  background-color: #FFFFFF !important;
+  background-color: #C25A3A !important;
   border: none !important;
   padding: 0.75rem !important;
   transition: all 0.3s ease !important;
@@ -182,48 +153,32 @@
   min-height: 40px !important;
 }
 
-.dark .cky-btn-revisit {
-  background-color: #0B0B10 !important;
-}
-
 .cky-btn-revisit img {
   width: 20px !important;
   height: 20px !important;
-  filter: invert(0) !important;
+  filter: brightness(0) invert(1) !important;
   opacity: 1 !important;
 }
 
-.dark .cky-btn-revisit img {
-  filter: invert(1) !important;
-}
-
-/* Hover effect dla przycisku */
 .cky-btn-revisit:hover {
-  background-color: #FAF6EE !important;
+  background-color: #D8A23A !important;
 }
 
-.dark .cky-btn-revisit:hover {
-  background-color: #241b2b !important;
-}
-
-/* ================== MODAL PREFERENCJI ================== */
+/* ================== MODAL PREFERENCJI - NAPRAWIONY ================== */
 
 /* Główny modal */
 .cky-modal {
-  z-index: 9999 !important; /* Zmniejszony z-index */
-}
-
-/* Tło modala - pozwala na kliknięcie poza modalem */
-.cky-modal::before {
-  content: '' !important;
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;
   right: 0 !important;
   bottom: 0 !important;
+  z-index: 999999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 1rem !important;
   background-color: rgba(0, 0, 0, 0.5) !important;
-  z-index: 999 !important;
-  pointer-events: auto !important;
 }
 
 /* Kontener preferencji */
@@ -232,17 +187,17 @@
   border: 3px solid #000000 !important;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25) !important;
   font-family: 'Inter', sans-serif !important;
-  max-width: 90vw !important;
+  max-width: 800px !important;
+  width: 90vw !important;
   max-height: 90vh !important;
   position: relative !important;
-  z-index: 10000 !important;
+  z-index: 1 !important;
   background-color: #FFFFFF !important;
-}
-
-.dark .cky-preference-center {
-  border-color: #FFFFFF !important;
-  background-color: #0B0B10 !important;
-  color: #FFFFFF !important;
+  color: #2E2217 !important;
+  overflow-y: auto !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 /* Header modala */
@@ -252,10 +207,7 @@
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
-}
-
-.dark .cky-preference-header {
-  border-bottom-color: #FFFFFF !important;
+  background-color: #FFFFFF !important;
 }
 
 /* Tytuł modala */
@@ -265,6 +217,7 @@
   line-height: 1.2 !important;
   text-transform: uppercase !important;
   letter-spacing: -0.025em !important;
+  color: #2E2217 !important;
 }
 
 /* Przycisk zamknięcia */
@@ -274,6 +227,7 @@
   padding: 0.5rem !important;
   cursor: pointer !important;
   transition: opacity 0.3s ease !important;
+  z-index: 10 !important;
 }
 
 .cky-btn-close:hover {
@@ -286,19 +240,17 @@
   filter: invert(0) !important;
 }
 
-.dark .cky-btn-close img {
-  filter: invert(1) !important;
-}
-
 /* Treść modala */
 .cky-preference-content-wrapper {
   padding: 1.5rem !important;
+  background-color: #FFFFFF !important;
 }
 
 .cky-preference-content-wrapper p {
   font-size: 0.875rem !important;
   line-height: 1.6 !important;
   margin-bottom: 1rem !important;
+  color: #2E2217 !important;
 }
 
 /* Separator */
@@ -308,15 +260,12 @@
   margin: 1rem 0 !important;
 }
 
-.dark .cky-horizontal-separator {
-  background-color: #FFFFFF !important;
-}
-
 /* ================== AKORDION KATEGORII ================== */
 
 /* Kontener akordionu */
 .cky-accordion-wrapper {
   padding: 0 1.5rem 1.5rem !important;
+  background-color: #FFFFFF !important;
 }
 
 /* Pojedynczy akordion */
@@ -327,28 +276,17 @@
   overflow: hidden !important;
 }
 
-.dark .cky-accordion {
-  border-color: #FFFFFF !important;
-}
-
 /* Header akordionu */
 .cky-accordion-header-wrapper {
   padding: 1rem !important;
   background-color: #FAF6EE !important;
   cursor: pointer !important;
   transition: background-color 0.3s ease !important;
-}
-
-.dark .cky-accordion-header-wrapper {
-  background-color: #241b2b !important;
+  position: relative !important;
 }
 
 .cky-accordion-header-wrapper:hover {
   background-color: #D8A23A !important;
-}
-
-.dark .cky-accordion-header-wrapper:hover {
-  background-color: #3A245A !important;
 }
 
 /* Tytuł kategorii */
@@ -362,7 +300,9 @@
   cursor: pointer !important;
   width: 100% !important;
   text-align: left !important;
-  color: inherit !important;
+  color: #2E2217 !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 /* Opis kategorii */
@@ -371,6 +311,7 @@
   line-height: 1.5 !important;
   margin-top: 0.5rem !important;
   margin-bottom: 0 !important;
+  color: #2E2217 !important;
 }
 
 /* Status "Zawsze aktywne" */
@@ -401,24 +342,41 @@
   border-top: 1px solid #000000 !important;
 }
 
-.dark .cky-accordion-body {
-  background-color: #2a2a2a !important;
-  border-top-color: #FFFFFF !important;
+/* Kontrola wyświetlania akordionu */
+.cky-accordion-item[aria-expanded="false"] .cky-accordion-body {
+  display: none !important;
+}
+
+.cky-accordion-item[aria-expanded="true"] .cky-accordion-body {
+  display: block !important;
 }
 
 /* Tabela audytu */
 .cky-audit-table {
   font-size: 0.75rem !important;
   line-height: 1.4 !important;
+  width: 100% !important;
+  border-collapse: collapse !important;
+}
+
+.cky-audit-table th,
+.cky-audit-table td {
+  padding: 0.5rem !important;
+  border: 1px solid #ddd !important;
+  text-align: left !important;
+  color: #2E2217 !important;
+}
+
+.cky-audit-table th {
+  background-color: #f8f8f8 !important;
+  font-weight: 600 !important;
 }
 
 .cky-empty-cookies-text {
   font-style: italic !important;
   color: #666 !important;
-}
-
-.dark .cky-empty-cookies-text {
-  color: #aaa !important;
+  padding: 1rem !important;
+  text-align: center !important;
 }
 
 /* ================== FOOTER MODALA ================== */
@@ -428,16 +386,6 @@
   border-top: 3px solid #000000 !important;
   padding: 1.5rem !important;
   background-color: #FAF6EE !important;
-}
-
-.dark .cky-footer-wrapper {
-  border-top-color: #FFFFFF !important;
-  background-color: #241b2b !important;
-}
-
-/* Cień footer */
-.cky-footer-shadow {
-  display: none !important;
 }
 
 /* Kontener przycisków footer */
@@ -467,10 +415,7 @@
   letter-spacing: 0.025em !important;
   transition: all 0.3s ease !important;
   flex: 1 !important;
-}
-
-.dark .cky-footer-wrapper .cky-btn {
-  border-color: #FFFFFF !important;
+  cursor: pointer !important;
 }
 
 .cky-footer-wrapper .cky-btn:hover {
@@ -501,32 +446,67 @@
   font-size: inherit !important;
 }
 
-.dark .cky-show-desc-btn {
-  color: #6B2D5B !important;
-}
-
 .cky-show-desc-btn:hover {
   opacity: 0.8 !important;
 }
 
-/* ================== UKRYCIE "POWERED BY" ================== */
+/* ================== PRZEŁĄCZNIKI (TOGGLES) ================== */
 
-/* Ukrycie logo CookieYes w głównym banerze */
-.cky-consent-container [data-cky-tag="powered-by"] {
-  display: none !important;
+.cky-slider {
+  position: relative !important;
+  width: 50px !important;
+  height: 25px !important;
+  background-color: #ccc !important;
+  border-radius: 0 !important;
+  border: 2px solid #000 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
 }
 
-/* Ukrycie logo CookieYes w modalu */
-.cky-modal [data-cky-tag="detail-powered-by"] {
+.cky-slider:before {
+  position: absolute !important;
+  content: "" !important;
+  height: 19px !important;
+  width: 19px !important;
+  left: 2px !important;
+  bottom: 2px !important;
+  background-color: #000 !important;
+  transition: all 0.3s ease !important;
+}
+
+input:checked + .cky-slider {
+  background-color: #C25A3A !important;
+}
+
+input:checked + .cky-slider:before {
+  transform: translateX(25px) !important;
+  background-color: #fff !important;
+}
+
+/* ================== UKRYCIE "POWERED BY" ================== */
+
+.cky-consent-container [data-cky-tag="powered-by"],
+.cky-modal [data-cky-tag="detail-powered-by"],
+.cky-preference-center [data-cky-tag="detail-powered-by"] {
   display: none !important;
 }
 
 /* ================== RESPONSYWNOŚĆ ================== */
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .cky-consent-container {
     margin: 0.5rem !important;
     border-width: 2px !important;
+  }
+  
+  .cky-preference-center {
+    width: 95vw !important;
+    max-width: none !important;
+  }
+  
+  .cky-modal {
+    padding: 0.5rem !important;
+    align-items: flex-start !important;
   }
   
   .cky-notice-content-wrapper,
@@ -548,20 +528,6 @@
   }
 }
 
-/* ================== ANIMACJE I TRANSITIONS ================== */
-
-/* Smooth transitions dla wszystkich elementów */
-.cky-consent-container *,
-.cky-modal * {
-  transition: all 0.3s ease !important;
-}
-
-/* Hover effects */
-.cky-accordion-header-wrapper:hover,
-.cky-btn:hover {
-  transform: translateY(-2px) !important;
-}
-
 /* ================== CUSTOM SCROLLBAR ================== */
 
 .cky-modal ::-webkit-scrollbar {
@@ -572,10 +538,6 @@
   background: #f1f1f1 !important;
 }
 
-.dark .cky-modal ::-webkit-scrollbar-track {
-  background: #2a2a2a !important;
-}
-
 .cky-modal ::-webkit-scrollbar-thumb {
   background: #C25A3A !important;
   border-radius: 0 !important;
@@ -584,132 +546,3 @@
 .cky-modal ::-webkit-scrollbar-thumb:hover {
   background: #D8A23A !important;
 }
-/* Główny baner cookies - bez dark mode, domyślne style CookieYes */
-/* ================== SILNE NADPISANIA COOKIEYES ================== */
-/* Główny baner cookies - bez dark mode (zostawiamy domyślne style CookieYes) */
-/* Przyciski głównego banera - bez dark mode, domyślne style CookieYes */
-/* Panel preferencji - bez dark mode, domyślne style CookieYes */
-/* Stare style ikonki usunięte - zastąpione nowymi */
-/* Modal i footer - bez dark mode, domyślne style CookieYes */
-/* ================== NAPRAWKA PRZYCISKU REVISIT ================== */
-body:not(.dark) .cky-btn-revisit-wrapper, html:not(.dark) .cky-btn-revisit-wrapper { background-color: #C25A3A !important; }
-body:not(.dark) .cky-btn-revisit, html:not(.dark) .cky-btn-revisit { background-color: #C25A3A !important; }
-/* ================== NAPRAWKA KLIKALNOŚCI MODALA ================== */
-.cky-btn-close { cursor: pointer !important; pointer-events: auto !important; z-index: 10001 !important; }
-.cky-btn-close { cursor: pointer !important; z-index: 10001 !important; }
-/* ================== NAPRAWKA TŁA MODALA W DARK MODE ================== */
-/* Wszystkie elementy panelu preferencji - bez dark mode, domyślne style CookieYes */
-/* Stare style klikalności usunięte - zastąpione bezpiecznymi */
-/* Stare style z-index usunięte - zastąpione bezpiecznymi */
-/* Stare style revisit usunięte - zastąpione nowymi */
-/* Stare style panelu preferencji usunięte - zastąpione nowymi */
-/* Stare style usunięte - zastąpione bezpiecznymi */
-/* ================== BEZPIECZNE NADPISANIA COOKIEYES ================== */
-/* 1) Kolejność i specyficzność - umieszczamy po skrypcie CookieYes */
-/* Unikamy selektorów [style*="..."] - są kruche */
-/* 2) Klikalność - z-index + pointer-events tylko tam, gdzie trzeba */
-/* Modal i jego kontent zawsze najwyżej */
-.cky-preference-center, .cky-modal, #cookieyesPreferenceCenter { position: fixed !important; z-index: 2147483646 !important; }
-/* Overlay tuż pod modalem – może łapać klik do zamykania */
-.cky-overlay, .cky-preference-overlay { position: fixed !important; z-index: 2147483645 !important; pointer-events: auto !important; }
-/* Gdy CookieYes otwiera modal, zablokuj kliki w stałe elementy strony */
-html.cky-modal-open .site-header, html.cky-modal-open .sticky, html.cky-modal-open [style*="position:fixed"] { pointer-events: none !important; }
-/* Zapobieganie nowym stacking contextom nad modalem */
-.site-header, .sticky { transform: none !important; filter: none !important; perspective: none !important; }
-/* Panel preferencji - bez dark mode, domyślne style CookieYes */
-/* Revisit — tło i równy "stroke" */
-:root { --brand-orange: #C25A3A; --dark-bg: #0B0B10; }
-/* Light: ciemniejszy pomarańcz z palety */
-.cky-btn-revisit { background: var(--brand-orange) !important; border: 2px solid currentColor !important; border-radius: 8px !important; }
-/* Dark: bez dark mode, domyślne style CookieYes */
-/* Ikonka: biała w obu trybach */
-.cky-btn-revisit img { filter: brightness(0) invert(1) !important; }
-/* 5) Najczęstsza przyczyna "nie-klikania" */
-/* Nie tyle same style CookieYes, co Twoje nadpisania (transform na headerze, wysoki z-index sticky, globalne pointer-events) */
-/* tworzą nowe konteksty i "przykrywają" modal. Dlatego: */
-/* Modal najwyżej (patrz punkt 2), */
-/* Wyłącz kliki w sticky/fixed tylko gdy modal jest otwarty (.cky-modal-open), */
-/* Unikaj masowego pointer-events: none/auto bez warunku. */
-/* ================== USUWANIE STARYCH PROBLEMATYCZNYCH STYLI ================== */
-/* Usuwamy stare style które mogły powodować konflikty */
-/* Nadpisujemy tylko to co konieczne, bez "rycia w klikach" */
-/* ================== NAPRAWKA WYŚRODKOWANIA I STYLOWANIA ================== */
-/* 1) Wyśrodkowanie preferencji względem całej strony */
-.cky-preference-center { position: fixed !important; top: 50% !important; left: 50% !important; transform: translate(-50%, -50%) !important; max-width: 90vw !important; max-height: 90vh !important; overflow-y: auto !important; display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; text-align: center !important; }
-.cky-preference-center * { text-align: center !important; }
-/* 2) Główny baner cookies - bez dark mode (zostawiamy domyślne) */
-/* Usuwamy dark mode dla głównego banera - zostawiamy domyślne style CookieYes */
-/* 3) Naprawka revisit button - rozjechanie na boki */
-.cky-btn-revisit-wrapper { display: flex !important; align-items: center !important; justify-content: center !important; width: auto !important; height: auto !important; }
-.cky-btn-revisit { display: flex !important; align-items: center !important; justify-content: center !important; width: 40px !important; height: 40px !important; padding: 0 !important; margin: 0 !important; }
-.cky-btn-revisit img { width: 20px !important; height: 20px !important; margin: 0 !important; padding: 0 !important; }
-/* Usunięte duplikaty - zastąpione nowymi stylami */
-/* 2) Wyłączenie dark mode z głównego banera - zostawiamy domyślne style */
-/* Główny baner cookies - bez dark mode, domyślne style CookieYes */
-/* 3) Biała ikonka revisit niezależnie od trybu */
-.cky-btn-revisit img { filter: brightness(0) invert(1) !important; }
-/* 4) Usunięcie podwójnego stroke z revisit button */
-.cky-btn-revisit-wrapper { border: none !important; outline: none !important; box-shadow: none !important; }
-.cky-btn-revisit { border: 2px solid currentColor !important; outline: none !important; box-shadow: none !important; }
-/* ================== CAŁKOWITE USUNIĘCIE DARK MODE I REVISIT ================== */
-/* 1) Całkowite usunięcie dark mode z całego banera i jego elementów */
-/* Wymuszamy domyślne style CookieYes dla wszystkich elementów banera */
-body.dark .cky-consent-container, html.dark .cky-consent-container, .dark .cky-consent-container { background-color: #FFFFFF !important; color: #212121 !important; border-color: #F4F4F4 !important; }
-body.dark .cky-notice-content-wrapper, html.dark .cky-notice-content-wrapper, .dark .cky-notice-content-wrapper { color: #212121 !important; }
-body.dark .cky-title, html.dark .cky-title, .dark .cky-title { color: #212121 !important; }
-body.dark .cky-notice-des p, html.dark .cky-notice-des p, .dark .cky-notice-des p { color: #212121 !important; }
-body.dark .cky-btn-customize, html.dark .cky-btn-customize, .dark .cky-btn-customize { background-color: transparent !important; color: #1863dc !important; border-color: #1863dc !important; }
-body.dark .cky-btn-reject, html.dark .cky-btn-reject, .dark .cky-btn-reject { background-color: #1863dc !important; color: #FFFFFF !important; border-color: #1863dc !important; }
-body.dark .cky-btn-accept, html.dark .cky-btn-accept, .dark .cky-btn-accept { background-color: #1863dc !important; color: #FFFFFF !important; border-color: #1863dc !important; }
-/* 2) Całkowite zablokowanie wyświetlania elementu revisit */
-.cky-btn-revisit-wrapper, .cky-revisit-bottom-left, [data-cky-tag="revisit-consent"] { display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important; }
-/* 3) Usunięcie wszystkich pozostałych style dark mode dla banera */
-/* Wymuszamy domyślne style dla wszystkich elementów banera w dark mode */
-body.dark .cky-consent-bar, html.dark .cky-consent-bar, .dark .cky-consent-bar { border-color: #f4f4f4 !important; background-color: #FFFFFF !important; }
-body.dark .cky-notice, html.dark .cky-notice, .dark .cky-notice { color: #212121 !important; }
-body.dark .cky-notice-group, html.dark .cky-notice-group, .dark .cky-notice-group { color: #212121 !important; }
-body.dark .cky-notice-btn-wrapper, html.dark .cky-notice-btn-wrapper, .dark .cky-notice-btn-wrapper { color: #212121 !important; }
-body.dark [data-cky-tag="powered-by"], html.dark [data-cky-tag="powered-by"], .dark [data-cky-tag="powered-by"] { color: #212121 !important; background-color: transparent !important; }
-/* ================== NAPRAWKA UKRYWANIA PANELU PREFERENCJI ================== */
-/* 1) Wymuszenie ukrywania panelu gdy nie jest aktywny */
-.cky-preference-center:not([style*="display: block"]):not([style*="display:block"]) { display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important; }
-/* 2) Wymuszenie ukrywania całego modala gdy nie jest aktywny */
-.cky-modal:not([style*="display: block"]):not([style*="display:block"]) { display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important; }
-/* 3) Wymuszenie ukrywania overlay gdy nie jest aktywny */
-.cky-overlay:not([style*="display: block"]):not([style*="display:block"]), .cky-preference-overlay:not([style*="display: block"]):not([style*="display:block"]) { display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important; }
-/* 4) Dodatkowe zabezpieczenia - ukrywanie gdy nie ma odpowiednich klas */
-.cky-preference-center:not(.cky-active):not([data-cky-tag="detail"]) { display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important; }
-.cky-modal:not(.cky-active):not([data-cky-tag="modal"]) { display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important; }
-/* 5) Wymuszenie resetowania pozycji gdy panel jest ukryty */
-.cky-preference-center:not([style*="display: block"]):not([style*="display:block"]) { position: absolute !important; top: -9999px !important; left: -9999px !important; transform: none !important; }
-.cky-modal:not([style*="display: block"]):not([style*="display:block"]) { position: absolute !important; top: -9999px !important; left: -9999px !important; transform: none !important; }
-/* ================== CAŁKOWITE USUNIĘCIE DARK MODE Z PANELU COOKIES I PREFERENCJI ================== */
-/* 1) Wymuszenie light mode dla panelu preferencji w dark mode */
-body.dark .cky-preference-center, html.dark .cky-preference-center { background-color: #FFFFFF !important; color: #212121 !important; border-color: #F4F4F4 !important; }
-body.dark .cky-preference-center *, html.dark .cky-preference-center * { color: #212121 !important; border-color: #F4F4F4 !important; background-color: #FFFFFF !important; }
-/* 2) Wymuszenie light mode dla nagłówka preferencji w dark mode */
-body.dark .cky-preference-header, html.dark .cky-preference-header { background-color: #FFFFFF !important; color: #212121 !important; border-bottom-color: #F4F4F4 !important; }
-body.dark .cky-preference-title, html.dark .cky-preference-title { color: #212121 !important; }
-/* 3) Wymuszenie light mode dla treści preferencji w dark mode */
-body.dark .cky-preference-content-wrapper, html.dark .cky-preference-content-wrapper { color: #212121 !important; background-color: #FFFFFF !important; }
-body.dark .cky-preference-content-wrapper *, html.dark .cky-preference-content-wrapper * { color: #212121 !important; }
-/* 4) Wymuszenie light mode dla akordionu w dark mode */
-body.dark .cky-accordion-header-wrapper, html.dark .cky-accordion-header-wrapper { background-color: #FFFFFF !important; color: #212121 !important; border-color: #F4F4F4 !important; }
-body.dark .cky-accordion-btn, html.dark .cky-accordion-btn { color: #212121 !important; background-color: #FFFFFF !important; }
-body.dark .cky-accordion-header-des p, html.dark .cky-accordion-header-des p { color: #212121 !important; background-color: #FFFFFF !important; }
-/* 5) Wymuszenie light mode dla tabele audytu w dark mode */
-body.dark .cky-audit-table, html.dark .cky-audit-table { background-color: #f4f4f4 !important; color: #212121 !important; border-color: #ebebeb !important; }
-/* 6) Wymuszenie light mode dla footer modala w dark mode */
-body.dark .cky-footer-wrapper, html.dark .cky-footer-wrapper { background: #FFFFFF !important; color: #212121 !important; border-top-color: #F4F4F4 !important; }
-/* 7) Wymuszenie light mode dla przycisków w footer w dark mode */
-body.dark .cky-footer-wrapper .cky-btn, html.dark .cky-footer-wrapper .cky-btn { background-color: #1863dc !important; color: #FFFFFF !important; border-color: #1863dc !important; }
-body.dark .cky-footer-wrapper .cky-btn-reject, html.dark .cky-footer-wrapper .cky-btn-reject { background-color: #1863dc !important; color: #FFFFFF !important; border-color: #1863dc !important; }
-/* 8) Wymuszenie light mode dla separatorów w dark mode */
-body.dark .cky-horizontal-separator, html.dark .cky-horizontal-separator { background-color: #F4F4F4 !important; }
-body.dark .cky-accordion-body, html.dark .cky-accordion-body { background-color: #FFFFFF !important; border-top-color: #F4F4F4 !important; }
-/* 9) Wymuszenie light mode dla przycisku zamykania w dark mode */
-body.dark .cky-btn-close, html.dark .cky-btn-close { background-color: #FFFFFF !important; color: #212121 !important; border-color: #F4F4F4 !important; }
-/* 10) Wymuszenie light mode dla przycisku "pokaż więcej" w dark mode */
-body.dark .cky-show-desc-btn, html.dark .cky-show-desc-btn { color: #1863dc !important; background-color: transparent !important; }
-/* 11) Wymuszenie light mode dla wszystkich pozostałych elementów w dark mode */
-body.dark .cky-modal *, html.dark .cky-modal * { color: #212121 !important; background-color: #FFFFFF !important; border-color: #F4F4F4 !important; }
