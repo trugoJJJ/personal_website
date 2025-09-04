@@ -7,7 +7,7 @@
 /* Główny kontener banera */
 .cky-consent-container {
   border-radius: 0 !important; /* Kanciaste rogi */
-  border: 3px solid #000000 !important; border-top: 3px solid #000000 !important; border-bottom: 3px solid #000000 !important; /* Gruby stroke */
+  border: 3px solid #000000 !important; /* Gruby stroke */
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
   font-family: 'Inter', sans-serif !important;
   max-width: 90vw !important;
@@ -72,7 +72,7 @@
 .cky-btn-customize {
   background-color: #FFFFFF !important;
   color: #000000 !important;
-  border: 3px solid #000000 !important; border-top: 3px solid #000000 !important; border-bottom: 3px solid #000000 !important;
+  border: 3px solid #000000 !important;
   border-radius: 0 !important;
   padding: 0.75rem 1.5rem !important;
   font-weight: 800 !important;
@@ -99,7 +99,7 @@
 .cky-btn-reject {
   background-color: #736134 !important;
   color: #FFFFFF !important;
-  border: 3px solid #000000 !important; border-top: 3px solid #000000 !important; border-bottom: 3px solid #000000 !important;
+  border: 3px solid #000000 !important;
   border-radius: 0 !important;
   padding: 0.75rem 1.5rem !important;
   font-weight: 800 !important;
@@ -123,7 +123,7 @@
 .cky-btn-accept {
   background-color: #C25A3A !important;
   color: #FFFFFF !important;
-  border: 3px solid #000000 !important; border-top: 3px solid #000000 !important; border-bottom: 3px solid #000000 !important;
+  border: 3px solid #000000 !important;
   border-radius: 0 !important;
   padding: 0.75rem 1.5rem !important;
   font-weight: 800 !important;
@@ -148,7 +148,7 @@
 /* Kontener przycisku revisit */
 .cky-btn-revisit-wrapper {
   border-radius: 0 !important;
-  border: 3px solid #000000 !important; border-top: 3px solid #000000 !important; border-bottom: 3px solid #000000 !important;
+  border: 3px solid #000000 !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
   transition: all 0.3s ease !important;
   background-color: #FFFFFF !important;
@@ -210,7 +210,7 @@
 
 /* Główny modal */
 .cky-modal {
-  z-index: 1000 !important; /* Zmniejszony z-index */
+  z-index: 9999 !important; /* Zmniejszony z-index */
 }
 
 /* Tło modala - pozwala na kliknięcie poza modalem */
@@ -229,13 +229,13 @@
 /* Kontener preferencji */
 .cky-preference-center {
   border-radius: 0 !important;
-  border: 3px solid #000000 !important; border-top: 3px solid #000000 !important; border-bottom: 3px solid #000000 !important;
+  border: 3px solid #000000 !important;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25) !important;
   font-family: 'Inter', sans-serif !important;
   max-width: 90vw !important;
   max-height: 90vh !important;
   position: relative !important;
-  z-index: 1001 !important;
+  z-index: 10000 !important;
   background-color: #FFFFFF !important;
 }
 
@@ -458,7 +458,7 @@
 .cky-footer-wrapper .cky-btn {
   background-color: #C25A3A !important;
   color: #FFFFFF !important;
-  border: 3px solid #000000 !important; border-top: 3px solid #000000 !important; border-bottom: 3px solid #000000 !important;
+  border: 3px solid #000000 !important;
   border-radius: 0 !important;
   padding: 0.75rem 1.5rem !important;
   font-weight: 800 !important;
@@ -590,3 +590,11 @@
 .dark .cky-accordion-header-wrapper { background-color: #241b2b !important; color: #FFFFFF !important; }
 .dark .cky-accordion-btn { color: #FFFFFF !important; }
 .dark .cky-accordion-header-des p { color: #FFFFFF !important; }
+.dark .cky-preference-title { color: #FFFFFF !important; }
+.dark .cky-preference-header { color: #FFFFFF !important; }
+.dark .cky-notice-content-wrapper { color: #FFFFFF !important; }
+.dark .cky-title { color: #FFFFFF !important; }
+.dark .cky-notice-des p { color: #FFFFFF !important; }
+.dark .cky-btn-customize { background-color: #0B0B10 !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
+.dark .cky-btn-reject { background-color: #736134 !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
+.dark .cky-btn-accept { background-color: #C25A3A !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
