@@ -151,10 +151,16 @@
   border: 3px solid #000000 !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
   transition: all 0.3s ease !important;
+  background-color: #FFFFFF !important;
+  position: fixed !important;
+  bottom: 20px !important;
+  left: 20px !important;
+  z-index: 999 !important;
 }
 
 .dark .cky-btn-revisit-wrapper {
   border-color: #FFFFFF !important;
+  background-color: #0B0B10 !important;
 }
 
 .cky-btn-revisit-wrapper:hover {
@@ -168,6 +174,12 @@
   border: none !important;
   padding: 0.75rem !important;
   transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 40px !important;
+  min-height: 40px !important;
 }
 
 .dark .cky-btn-revisit {
@@ -178,17 +190,40 @@
   width: 20px !important;
   height: 20px !important;
   filter: invert(0) !important;
+  opacity: 1 !important;
 }
 
 .dark .cky-btn-revisit img {
   filter: invert(1) !important;
 }
 
+/* Hover effect dla przycisku */
+.cky-btn-revisit:hover {
+  background-color: #FAF6EE !important;
+}
+
+.dark .cky-btn-revisit:hover {
+  background-color: #241b2b !important;
+}
+
 /* ================== MODAL PREFERENCJI ================== */
 
 /* Główny modal */
 .cky-modal {
-  z-index: 9999 !important;
+  z-index: 1000 !important; /* Zmniejszony z-index */
+}
+
+/* Tło modala - pozwala na kliknięcie poza modalem */
+.cky-modal::before {
+  content: '' !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  z-index: -1 !important;
+  pointer-events: auto !important;
 }
 
 /* Kontener preferencji */
@@ -199,6 +234,9 @@
   font-family: 'Inter', sans-serif !important;
   max-width: 90vw !important;
   max-height: 90vh !important;
+  position: relative !important;
+  z-index: 1001 !important;
+  background-color: #FFFFFF !important;
 }
 
 .dark .cky-preference-center {
