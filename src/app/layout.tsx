@@ -8,7 +8,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Adam Gałecki - Specjalista SEO & SEM",
+  title: "Adam Gałęcki - Specjalista SEO & SEM",
   description: "Profesjonalne usługi SEO, SEM i analityki. Zwiększ widoczność swojej strony w wyszukiwarkach.",
 };
 
@@ -25,16 +25,39 @@ export default function RootLayout({
             __html: `
               (function() {
                 try {
+                  console.log('Theme script starting...');
                   const urlParams = new URLSearchParams(window.location.search);
                   const theme = urlParams.get('theme');
+                  console.log('Theme param:', theme);
                   
                   if (theme === 'dark' || theme === 'light') {
-                    // Wyczyść localStorage
-                    localStorage.removeItem('theme-preference');
+                    console.log('Setting theme to:', theme);
                     
-                    // Ustaw motyw na HTML
+                    // Wyczyść wszystkie możliwe klucze motywu
+                    const keysToRemove = [
+                      'theme-preference',
+                      'theme',
+                      'next-themes',
+                      'color-scheme'
+                    ];
+                    
+                    keysToRemove.forEach(key => {
+                      localStorage.removeItem(key);
+                      sessionStorage.removeItem(key);
+                    });
+                    
+                    // Ustaw motyw na HTML natychmiast
                     document.documentElement.classList.remove('light', 'dark');
                     document.documentElement.classList.add(theme);
+                    console.log('HTML classes after setting theme:', document.documentElement.classList.toString());
+                    
+                    // Dodaj style inline żeby wymusić motyw
+                    const style = document.createElement('style');
+                    style.textContent = \`
+                      html.dark { color-scheme: dark !important; }
+                      html.light { color-scheme: light !important; }
+                    \`;
+                    document.head.appendChild(style);
                     
                     // Usuń parametr z URL
                     urlParams.delete('theme');
@@ -43,7 +66,31 @@ export default function RootLayout({
                     
                     if (window.history && window.history.replaceState) {
                       window.history.replaceState(null, '', newUrl);
+                      console.log('URL cleaned:', newUrl);
                     }
+                    
+                    // Dodaj listener żeby blokować zmiany motywu
+                    const observer = new MutationObserver(function(mutations) {
+                      mutations.forEach(function(mutation) {
+                        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                          const html = document.documentElement;
+                          if (!html.classList.contains(theme)) {
+                            console.log('Theme change blocked, resetting to:', theme);
+                            html.classList.remove('light', 'dark');
+                            html.classList.add(theme);
+                          }
+                        }
+                      });
+                    });
+                    
+                    observer.observe(document.documentElement, {
+                      attributes: true,
+                      attributeFilter: ['class']
+                    });
+                    
+                    console.log('Theme script completed successfully');
+                  } else {
+                    console.log('No theme param found');
                   }
                 } catch (e) {
                   console.error('Theme script error:', e);
@@ -73,7 +120,7 @@ export default function RootLayout({
         <meta name="twitter:description" content="Zajmuję się kompleksową obsługą komunikacji marketingowej nakierowanej na osiąganie zamierzonych celów biznesowych w firmach B2B i B2C." />
         <meta name="twitter:image" content="/og_cover.png" />
       </head>
-      <body className={inter.className}>
+      <body className={inter.className} suppressHydrationWarning>
         <LoadingProvider>
           <Providers>
             {children}
