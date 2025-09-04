@@ -4,7 +4,7 @@ import "./globals.css";
 import { Providers } from "@/components/Providers";
 import { LoadingProvider } from "@/components/LoadingProvider";
 import ScrollToTop from "@/components/ScrollToTop";
-import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import { ThemeSwitcherScript } from "@/components/ThemeSwitcherScript";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,9 +21,6 @@ export default function RootLayout({
   return (
     <html lang="pl" suppressHydrationWarning>
       <head>
-        {/* External theme switcher script */}
-        <script src="/theme-switcher.js" defer></script>
-        
         <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" />
         <link rel="shortcut icon" href="/favicon.svg?v=2" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/favicon.svg?v=2" />
@@ -48,7 +45,7 @@ export default function RootLayout({
       <body className={inter.className} suppressHydrationWarning>
         <LoadingProvider>
           <Providers>
-            <ThemeSwitcher />
+            <ThemeSwitcherScript />
             {children}
             <ScrollToTop />
           </Providers>
