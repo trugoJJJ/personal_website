@@ -148,7 +148,7 @@ export const ArticlesSection = () => {
               Artykuły
             </h2>
           </header>
-          <div className="grid lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {[1, 2, 3].map((i) => (
               <article key={i} className="group border-3 border-black bg-white text-[#2E2217]">
                 <div className="aspect-[4/3] overflow-hidden relative border-b-3 border-black">

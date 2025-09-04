@@ -4,6 +4,7 @@ import "./globals.css";
 import { Providers } from "@/components/Providers";
 import { LoadingProvider } from "@/components/LoadingProvider";
 import ScrollToTop from "@/components/ScrollToTop";
+import { CookieBanner } from "@/components/CookieBanner";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -47,6 +48,7 @@ export default function RootLayout({
           <Providers>
             {children}
             <ScrollToTop />
+            <CookieBanner />
           </Providers>
         </LoadingProvider>
       </body>
