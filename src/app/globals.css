@@ -670,3 +670,46 @@ body.dark .cky-notice, html.dark .cky-notice, .dark .cky-notice { color: #212121
 body.dark .cky-notice-group, html.dark .cky-notice-group, .dark .cky-notice-group { color: #212121 !important; }
 body.dark .cky-notice-btn-wrapper, html.dark .cky-notice-btn-wrapper, .dark .cky-notice-btn-wrapper { color: #212121 !important; }
 body.dark [data-cky-tag="powered-by"], html.dark [data-cky-tag="powered-by"], .dark [data-cky-tag="powered-by"] { color: #212121 !important; background-color: transparent !important; }
+/* ================== NAPRAWKA UKRYWANIA PANELU PREFERENCJI ================== */
+/* 1) Wymuszenie ukrywania panelu gdy nie jest aktywny */
+.cky-preference-center:not([style*="display: block"]):not([style*="display:block"]) { display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important; }
+/* 2) Wymuszenie ukrywania całego modala gdy nie jest aktywny */
+.cky-modal:not([style*="display: block"]):not([style*="display:block"]) { display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important; }
+/* 3) Wymuszenie ukrywania overlay gdy nie jest aktywny */
+.cky-overlay:not([style*="display: block"]):not([style*="display:block"]), .cky-preference-overlay:not([style*="display: block"]):not([style*="display:block"]) { display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important; }
+/* 4) Dodatkowe zabezpieczenia - ukrywanie gdy nie ma odpowiednich klas */
+.cky-preference-center:not(.cky-active):not([data-cky-tag="detail"]) { display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important; }
+.cky-modal:not(.cky-active):not([data-cky-tag="modal"]) { display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important; }
+/* 5) Wymuszenie resetowania pozycji gdy panel jest ukryty */
+.cky-preference-center:not([style*="display: block"]):not([style*="display:block"]) { position: absolute !important; top: -9999px !important; left: -9999px !important; transform: none !important; }
+.cky-modal:not([style*="display: block"]):not([style*="display:block"]) { position: absolute !important; top: -9999px !important; left: -9999px !important; transform: none !important; }
+/* ================== CAŁKOWITE USUNIĘCIE DARK MODE Z PANELU COOKIES I PREFERENCJI ================== */
+/* 1) Wymuszenie light mode dla panelu preferencji w dark mode */
+body.dark .cky-preference-center, html.dark .cky-preference-center { background-color: #FFFFFF !important; color: #212121 !important; border-color: #F4F4F4 !important; }
+body.dark .cky-preference-center *, html.dark .cky-preference-center * { color: #212121 !important; border-color: #F4F4F4 !important; background-color: #FFFFFF !important; }
+/* 2) Wymuszenie light mode dla nagłówka preferencji w dark mode */
+body.dark .cky-preference-header, html.dark .cky-preference-header { background-color: #FFFFFF !important; color: #212121 !important; border-bottom-color: #F4F4F4 !important; }
+body.dark .cky-preference-title, html.dark .cky-preference-title { color: #212121 !important; }
+/* 3) Wymuszenie light mode dla treści preferencji w dark mode */
+body.dark .cky-preference-content-wrapper, html.dark .cky-preference-content-wrapper { color: #212121 !important; background-color: #FFFFFF !important; }
+body.dark .cky-preference-content-wrapper *, html.dark .cky-preference-content-wrapper * { color: #212121 !important; }
+/* 4) Wymuszenie light mode dla akordionu w dark mode */
+body.dark .cky-accordion-header-wrapper, html.dark .cky-accordion-header-wrapper { background-color: #FFFFFF !important; color: #212121 !important; border-color: #F4F4F4 !important; }
+body.dark .cky-accordion-btn, html.dark .cky-accordion-btn { color: #212121 !important; background-color: #FFFFFF !important; }
+body.dark .cky-accordion-header-des p, html.dark .cky-accordion-header-des p { color: #212121 !important; background-color: #FFFFFF !important; }
+/* 5) Wymuszenie light mode dla tabele audytu w dark mode */
+body.dark .cky-audit-table, html.dark .cky-audit-table { background-color: #f4f4f4 !important; color: #212121 !important; border-color: #ebebeb !important; }
+/* 6) Wymuszenie light mode dla footer modala w dark mode */
+body.dark .cky-footer-wrapper, html.dark .cky-footer-wrapper { background: #FFFFFF !important; color: #212121 !important; border-top-color: #F4F4F4 !important; }
+/* 7) Wymuszenie light mode dla przycisków w footer w dark mode */
+body.dark .cky-footer-wrapper .cky-btn, html.dark .cky-footer-wrapper .cky-btn { background-color: #1863dc !important; color: #FFFFFF !important; border-color: #1863dc !important; }
+body.dark .cky-footer-wrapper .cky-btn-reject, html.dark .cky-footer-wrapper .cky-btn-reject { background-color: #1863dc !important; color: #FFFFFF !important; border-color: #1863dc !important; }
+/* 8) Wymuszenie light mode dla separatorów w dark mode */
+body.dark .cky-horizontal-separator, html.dark .cky-horizontal-separator { background-color: #F4F4F4 !important; }
+body.dark .cky-accordion-body, html.dark .cky-accordion-body { background-color: #FFFFFF !important; border-top-color: #F4F4F4 !important; }
+/* 9) Wymuszenie light mode dla przycisku zamykania w dark mode */
+body.dark .cky-btn-close, html.dark .cky-btn-close { background-color: #FFFFFF !important; color: #212121 !important; border-color: #F4F4F4 !important; }
+/* 10) Wymuszenie light mode dla przycisku "pokaż więcej" w dark mode */
+body.dark .cky-show-desc-btn, html.dark .cky-show-desc-btn { color: #1863dc !important; background-color: transparent !important; }
+/* 11) Wymuszenie light mode dla wszystkich pozostałych elementów w dark mode */
+body.dark .cky-modal *, html.dark .cky-modal * { color: #212121 !important; background-color: #FFFFFF !important; border-color: #F4F4F4 !important; }
