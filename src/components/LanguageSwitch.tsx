@@ -60,13 +60,13 @@ const LanguageSwitchContent = () => {
       
       let result = '';
       if (pathname === "/") {
-        result = 'https://galecki.website/';
+        result = 'https://galecki.site/';
       } else if (pathname === "/polityka-prywatnosci") {
-        result = 'https://galecki.website/privacy-policy';
+        result = 'https://galecki.site/privacy-policy';
       } else if (pathname.startsWith("/portfolio/")) {
-        result = `https://galecki.website${pathname}`;
+        result = `https://galecki.site${pathname}`;
       } else {
-        result = 'https://galecki.website/';
+        result = 'https://galecki.site/';
       }
       
       console.log('Generated URL:', result);
@@ -170,7 +170,7 @@ export const LanguageSwitch = () => {
           PL
         </div>
         <a 
-          href="https://galecki.website/"
+          href="https://galecki.site/"
           className="rounded-none font-extrabold select-none transition-colors hover:opacity-80"
           style={{
             border: `3px solid ${LIGHT.black}`,
