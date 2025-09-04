@@ -599,10 +599,7 @@
 .dark .cky-btn-reject { background-color: #736134 !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
 .dark .cky-btn-accept { background-color: #C25A3A !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
 /* ================== SILNE NADPISANIA COOKIEYES ================== */
-body.dark .cky-consent-container, html.dark .cky-consent-container { background-color: #0B0B10 !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
-body.dark .cky-notice-content-wrapper, html.dark .cky-notice-content-wrapper { color: #FFFFFF !important; }
-body.dark .cky-title, html.dark .cky-title { color: #FFFFFF !important; }
-body.dark .cky-notice-des p, html.dark .cky-notice-des p { color: #FFFFFF !important; }
+/* Główny baner cookies - bez dark mode (zostawiamy domyślne style CookieYes) */
 body.dark .cky-btn-customize, html.dark .cky-btn-customize { background-color: #0B0B10 !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
 body.dark .cky-btn-reject, html.dark .cky-btn-reject { background-color: #736134 !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
 body.dark .cky-btn-accept, html.dark .cky-btn-accept { background-color: #C25A3A !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
@@ -613,8 +610,7 @@ body.dark .cky-preference-content-wrapper, html.dark .cky-preference-content-wra
 body.dark .cky-accordion-header-wrapper, html.dark .cky-accordion-header-wrapper { background-color: #241b2b !important; color: #FFFFFF !important; }
 body.dark .cky-accordion-btn, html.dark .cky-accordion-btn { color: #FFFFFF !important; }
 body.dark .cky-accordion-header-des p, html.dark .cky-accordion-header-des p { color: #FFFFFF !important; }
-body.dark .cky-btn-revisit img, html.dark .cky-btn-revisit img { filter: invert(1) !important; }
-body:not(.dark) .cky-btn-revisit img, html:not(.dark) .cky-btn-revisit img { filter: invert(0) !important; }
+/* Stare style ikonki usunięte - zastąpione nowymi */
 body.dark .cky-modal *, html.dark .cky-modal * { color: #FFFFFF !important; }
 body.dark .cky-footer-wrapper, html.dark .cky-footer-wrapper { background-color: #241b2b !important; border-top-color: #FFFFFF !important; }
 body.dark .cky-horizontal-separator, html.dark .cky-horizontal-separator { background-color: #FFFFFF !important; }
@@ -642,38 +638,11 @@ body.dark .cky-audit-table[style*="color: #212121"], html.dark .cky-audit-table[
 body.dark .cky-footer-wrapper[style*="background: linear-gradient"], html.dark .cky-footer-wrapper[style*="background: linear-gradient"] { background: #241b2b !important; }
 body.dark .cky-footer-wrapper button[style*="background-color: #1863dc"], html.dark .cky-footer-wrapper button[style*="background-color: #1863dc"] { background-color: #C25A3A !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
 body.dark .cky-footer-wrapper .cky-btn-reject[style*="background-color: #1863dc"], html.dark .cky-footer-wrapper .cky-btn-reject[style*="background-color: #1863dc"] { background-color: #736134 !important; }
-/* ================== NAPRAWKA KLIKALNOŚCI PREFERENCJI ================== */
-.cky-preference-center { pointer-events: auto !important; z-index: 10000 !important; }
-.cky-preference-center * { pointer-events: auto !important; }
-.cky-modal { pointer-events: auto !important; z-index: 9999 !important; }
-.cky-modal::before { pointer-events: none !important; z-index: 999 !important; }
-.cky-preference-center button { pointer-events: auto !important; cursor: pointer !important; }
-.cky-accordion-btn { pointer-events: auto !important; cursor: pointer !important; }
-.cky-footer-wrapper button { pointer-events: auto !important; cursor: pointer !important; }
-.cky-btn-close { pointer-events: auto !important; cursor: pointer !important; z-index: 10001 !important; }
-.cky-show-desc-btn { pointer-events: auto !important; cursor: pointer !important; }
-/* ================== NAPRAWKA HIERARCHII Z-INDEX ================== */
-:root { --brand-orange: #C25A3A; --dark-bg: #0B0B10; }
-/* MODAL ma być najwyżej */
-.cky-preference-center, .cky-modal, #cookieyesPreferenceCenter { position: fixed !important; z-index: 2147483646 !important; }
-/* Tło pod spodem, ale nie nad treścią */
-.cky-overlay, .cky-preference-overlay { position: fixed !important; z-index: 2147483645 !important; pointer-events: auto !important; }
-/* Gdy modal jest otwarty – wyłącz interakcje z "lepionymi" headerami itd. */
-html.cky-modal-open .site-header, html.cky-modal-open .sticky, html.cky-modal-open [style*="position: fixed"] { pointer-events: none !important; }
-/* Jeśli któryś przodek tworzy stacking context i przebija modal */
-.site-header, .sticky { transform: none !important; filter: none !important; perspective: none !important; }
-/* ================== NAPRAWKA REVISIT BUTTON ================== */
-.cky-btn-revisit { background: var(--brand-orange) !important; border: 2px solid currentColor !important; border-radius: 8px !important; }
-html.dark .cky-btn-revisit, body.dark .cky-btn-revisit { background: var(--dark-bg) !important; }
-/* Kolor ikonki */
-html:not(.dark) .cky-btn-revisit svg, html:not(.dark) .cky-btn-revisit img { filter: invert(0) !important; }
-html.dark .cky-btn-revisit svg, html.dark .cky-btn-revisit img { filter: invert(1) !important; }
-/* ================== NAPRAWKA PANELU PREFERENCJI DARK MODE ================== */
-html.dark .cky-preference-center, body.dark .cky-preference-center { background: #0B0B10 !important; color: #FFFFFF !important; }
-/* ================== USUWANIE STARYCH STYLI ================== */
-/* Nadpisujemy stare style które mogły powodować konflikty */
-.cky-preference-center { pointer-events: auto !important; }
-.cky-modal { pointer-events: auto !important; }
+/* Stare style klikalności usunięte - zastąpione bezpiecznymi */
+/* Stare style z-index usunięte - zastąpione bezpiecznymi */
+/* Stare style revisit usunięte - zastąpione nowymi */
+/* Stare style panelu preferencji usunięte - zastąpione nowymi */
+/* Stare style usunięte - zastąpione bezpiecznymi */
 /* ================== BEZPIECZNE NADPISANIA COOKIEYES ================== */
 /* 1) Kolejność i specyficzność - umieszczamy po skrypcie CookieYes */
 /* Unikamy selektorów [style*="..."] - są kruche */
@@ -686,18 +655,17 @@ html.dark .cky-preference-center, body.dark .cky-preference-center { background:
 html.cky-modal-open .site-header, html.cky-modal-open .sticky, html.cky-modal-open [style*="position:fixed"] { pointer-events: none !important; }
 /* Zapobieganie nowym stacking contextom nad modalem */
 .site-header, .sticky { transform: none !important; filter: none !important; perspective: none !important; }
-/* 3) Dark mode panel (czarne tło + białe teksty) */
+/* Dark mode panel (czarne tło + białe teksty) */
 html.dark .cky-preference-center, body.dark .cky-preference-center { background: #0B0B10 !important; color: #FFFFFF !important; }
 html.dark .cky-preference-center *, body.dark .cky-preference-center * { color: #FFFFFF !important; border-color: #FFFFFF33 !important; }
-/* 4) Revisit — tło i równy "stroke" */
+/* Revisit — tło i równy "stroke" */
 :root { --brand-orange: #C25A3A; --dark-bg: #0B0B10; }
 /* Light: ciemniejszy pomarańcz z palety */
 .cky-btn-revisit { background: var(--brand-orange) !important; border: 2px solid currentColor !important; border-radius: 8px !important; }
 /* Dark: ciemne tło */
 html.dark .cky-btn-revisit, body.dark .cky-btn-revisit { background: var(--dark-bg) !important; }
-/* Ikonka: czarna w light, biała w dark */
-html:not(.dark) .cky-btn-revisit svg, html:not(.dark) .cky-btn-revisit img { filter: invert(0) !important; }
-html.dark .cky-btn-revisit svg, html.dark .cky-btn-revisit img { filter: invert(1) !important; }
+/* Ikonka: biała w obu trybach */
+.cky-btn-revisit img { filter: brightness(0) invert(1) !important; }
 /* 5) Najczęstsza przyczyna "nie-klikania" */
 /* Nie tyle same style CookieYes, co Twoje nadpisania (transform na headerze, wysoki z-index sticky, globalne pointer-events) */
 /* tworzą nowe konteksty i "przykrywają" modal. Dlatego: */
@@ -707,3 +675,18 @@ html.dark .cky-btn-revisit svg, html.dark .cky-btn-revisit img { filter: invert(
 /* ================== USUWANIE STARYCH PROBLEMATYCZNYCH STYLI ================== */
 /* Usuwamy stare style które mogły powodować konflikty */
 /* Nadpisujemy tylko to co konieczne, bez "rycia w klikach" */
+/* ================== NAPRAWKA WYŚRODKOWANIA I STYLOWANIA ================== */
+/* 1) Wyśrodkowanie preferencji */
+.cky-preference-center { display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; text-align: center !important; }
+.cky-preference-center * { text-align: center !important; }
+/* 2) Główny baner cookies - bez dark mode (zostawiamy domyślne) */
+/* Usuwamy dark mode dla głównego banera - zostawiamy domyślne style CookieYes */
+/* 3) Naprawka revisit button - rozjechanie na boki */
+.cky-btn-revisit-wrapper { display: flex !important; align-items: center !important; justify-content: center !important; width: auto !important; height: auto !important; }
+.cky-btn-revisit { display: flex !important; align-items: center !important; justify-content: center !important; width: 40px !important; height: 40px !important; padding: 0 !important; margin: 0 !important; }
+.cky-btn-revisit img { width: 20px !important; height: 20px !important; margin: 0 !important; padding: 0 !important; }
+/* 4) Ikonka SVG - biała w obu trybach */
+.cky-btn-revisit img { filter: brightness(0) invert(1) !important; }
+/* Usuwamy stare style które mogły powodować problemy */
+/* Usuwamy stare style dark mode dla głównego banera */
+/* Usuwamy stare style ikonki które mogły powodować problemy */
