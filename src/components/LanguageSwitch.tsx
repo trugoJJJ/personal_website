@@ -47,19 +47,22 @@ const LanguageSwitchContent = () => {
 
   // Generate English version URL based on current path
   const getEnglishUrl = () => {
-    console.log('Current pathname:', pathname); // Debug log
-    console.log('Pathname type:', typeof pathname); // Debug log
-    
-    if (!pathname) return 'https://galecki.site/'; // Handle undefined case
-    
-    if (pathname === "/") return 'https://galecki.site/';
-    if (pathname === "/polityka-prywatnosci") return 'https://galecki.site/privacy-policy';
-    if (pathname.startsWith("/portfolio/")) {
-      // Keep the same portfolio path for English version
-      return `https://galecki.site${pathname}`;
+    try {
+      if (!pathname) return 'https://galecki.site/';
+      
+      if (pathname === "/") return 'https://galecki.site/';
+      if (pathname === "/polityka-prywatnosci") return 'https://galecki.site/privacy-policy';
+      if (pathname.startsWith("/portfolio/")) {
+        return `https://galecki.site${pathname}`;
+      }
+      return 'https://galecki.site/';
+    } catch (error) {
+      // Fallback to main page if there's any error
+      return 'https://galecki.site/';
     }
-    return 'https://galecki.site/';
   };
+
+
 
   const baseBtn = "rounded-none font-extrabold select-none transition-colors";
   const baseStyle: React.CSSProperties = isDark ? {
