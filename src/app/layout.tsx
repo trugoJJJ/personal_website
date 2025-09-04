@@ -4,6 +4,7 @@ import "./globals.css";
 import { Providers } from "@/components/Providers";
 import { LoadingProvider } from "@/components/LoadingProvider";
 import ScrollToTop from "@/components/ScrollToTop";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -47,6 +48,7 @@ export default function RootLayout({
       <body className={inter.className} suppressHydrationWarning>
         <LoadingProvider>
           <Providers>
+            <ThemeSwitcher />
             {children}
             <ScrollToTop />
           </Providers>
