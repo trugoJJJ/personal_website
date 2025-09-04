@@ -48,9 +48,12 @@ const LanguageSwitchContent = () => {
   // Generate English version URL based on current path
   const getEnglishUrl = () => {
     console.log('=== DEBUG: getEnglishUrl called! ===');
+    console.log('=== TIMESTAMP:', new Date().toISOString(), '===');
     console.log('Current pathname:', pathname);
     console.log('Current URL:', typeof window !== "undefined" ? window.location.href : 'no window');
     console.log('User agent:', typeof window !== "undefined" ? navigator.userAgent : 'no window');
+    console.log('Window object exists:', typeof window !== "undefined");
+    console.log('Document object exists:', typeof document !== "undefined");
     
     try {
       if (!pathname) {
