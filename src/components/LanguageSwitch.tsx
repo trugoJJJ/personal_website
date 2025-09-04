@@ -43,7 +43,10 @@ const LanguageSwitchContent = () => {
   const PALETTE = isDark ? DARK : LIGHT;
 
   const setPL = () => setLocale("pl" as Locale);
-  const setEN = () => setLocale("en" as Locale);
+  const setEN = () => {
+    // Przenieś na stronę angielską
+    window.open('https://galecki.website', '_blank');
+  };
 
   const baseBtn = "rounded-none font-extrabold select-none transition-colors";
   const baseStyle: React.CSSProperties = isDark ? {
@@ -71,24 +74,11 @@ const LanguageSwitchContent = () => {
         variant="outline"
         size="sm"
         onClick={setPL}
-        aria-pressed={locale === "pl"}
-        aria-label="Ustaw język polski"
+        aria-pressed={true}
+        aria-label="Język polski (aktywny)"
         className={baseBtn}
-        style={locale === "pl" ? activeStyle : baseStyle}
-        onMouseEnter={(e) => {
-          if (locale !== "pl") {
-            (e.currentTarget as HTMLButtonElement).style.background = PALETTE.amaranth;
-            (e.currentTarget as HTMLButtonElement).style.color = PALETTE.white;
-            (e.currentTarget as HTMLButtonElement).style.border = `${isDark ? '1px' : '3px'} solid ${isDark ? PALETTE.white : PALETTE.black}`;
-          }
-        }}
-        onMouseLeave={(e) => {
-          if (locale !== "pl") {
-            (e.currentTarget as HTMLButtonElement).style.background = baseStyle.background as string;
-            (e.currentTarget as HTMLButtonElement).style.color = baseStyle.color as string;
-            (e.currentTarget as HTMLButtonElement).style.border = baseStyle.border as string;
-          }
-        }}
+        style={activeStyle}
+        disabled={true}
       >
         PL
       </Button>
@@ -97,23 +87,19 @@ const LanguageSwitchContent = () => {
         variant="outline"
         size="sm"
         onClick={setEN}
-        aria-pressed={locale === "en"}
-        aria-label="Set language to English"
+        aria-pressed={false}
+        aria-label="Przejdź do strony angielskiej"
         className={baseBtn}
-        style={locale === "en" ? activeStyle : baseStyle}
+        style={baseStyle}
         onMouseEnter={(e) => {
-          if (locale !== "en") {
-            (e.currentTarget as HTMLButtonElement).style.background = PALETTE.amaranth;
-            (e.currentTarget as HTMLButtonElement).style.color = PALETTE.white;
-            (e.currentTarget as HTMLButtonElement).style.border = `${isDark ? '1px' : '3px'} solid ${isDark ? PALETTE.white : PALETTE.black}`;
-          }
+          (e.currentTarget as HTMLButtonElement).style.background = PALETTE.amaranth;
+          (e.currentTarget as HTMLButtonElement).style.color = PALETTE.white;
+          (e.currentTarget as HTMLButtonElement).style.border = `${isDark ? '1px' : '3px'} solid ${isDark ? PALETTE.white : PALETTE.black}`;
         }}
         onMouseLeave={(e) => {
-          if (locale !== "en") {
-            (e.currentTarget as HTMLButtonElement).style.background = baseStyle.background as string;
-            (e.currentTarget as HTMLButtonElement).style.color = baseStyle.color as string;
-            (e.currentTarget as HTMLButtonElement).style.border = baseStyle.border as string;
-          }
+          (e.currentTarget as HTMLButtonElement).style.background = baseStyle.background as string;
+          (e.currentTarget as HTMLButtonElement).style.color = baseStyle.color as string;
+          (e.currentTarget as HTMLButtonElement).style.border = baseStyle.border as string;
         }}
       >
         EN

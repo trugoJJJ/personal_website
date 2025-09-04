@@ -86,7 +86,8 @@ const I18nContext = createContext<I18nContextType | null>(null);
 
 export const I18nProvider = ({ children }: { children: ReactNode }) => {
   const [locale, setLocale] = useState<Locale>("pl");
-  const dict = DICTS[locale];
+  // Zawsze używaj polskiego słownika
+  const dict = PL;
 
   const value = useMemo<I18nContextType>(
     () => ({

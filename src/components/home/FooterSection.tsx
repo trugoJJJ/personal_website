@@ -169,6 +169,19 @@ const FooterSectionContent = () => {
                 Polityka Prywatności
               </Link>
             </div>
+            
+            {/* Link do strony angielskiej */}
+            <div className="mt-4 text-center">
+              <a 
+                href="https://galecki.website" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-sm hover:opacity-70 transition-opacity inline-flex items-center gap-2"
+                style={{ color: textColor }}
+              >
+                🇺🇸 English Version
+              </a>
+            </div>
           </div>
         </div>
       </div>

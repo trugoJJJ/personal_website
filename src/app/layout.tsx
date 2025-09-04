@@ -11,9 +11,11 @@ export default function RootLayout({
   return (
     <html lang="pl" suppressHydrationWarning>
       <head>
+        <title>Portfolio - Adam Gałęcki</title>
         <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" />
         <link rel="shortcut icon" href="/favicon.svg?v=2" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/favicon.svg?v=2" />
+        <link rel="alternate" hreflang="en" href="https://galecki.website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta httpEquiv="Pragma" content="no-cache" />
