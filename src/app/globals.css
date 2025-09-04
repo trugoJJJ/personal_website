@@ -598,3 +598,27 @@
 .dark .cky-btn-customize { background-color: #0B0B10 !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
 .dark .cky-btn-reject { background-color: #736134 !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
 .dark .cky-btn-accept { background-color: #C25A3A !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
+/* ================== SILNE NADPISANIA COOKIEYES ================== */
+body.dark .cky-consent-container, html.dark .cky-consent-container { background-color: #0B0B10 !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
+body.dark .cky-notice-content-wrapper, html.dark .cky-notice-content-wrapper { color: #FFFFFF !important; }
+body.dark .cky-title, html.dark .cky-title { color: #FFFFFF !important; }
+body.dark .cky-notice-des p, html.dark .cky-notice-des p { color: #FFFFFF !important; }
+body.dark .cky-btn-customize, html.dark .cky-btn-customize { background-color: #0B0B10 !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
+body.dark .cky-btn-reject, html.dark .cky-btn-reject { background-color: #736134 !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
+body.dark .cky-btn-accept, html.dark .cky-btn-accept { background-color: #C25A3A !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
+body.dark .cky-preference-center, html.dark .cky-preference-center { background-color: #0B0B10 !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
+body.dark .cky-preference-header, html.dark .cky-preference-header { color: #FFFFFF !important; border-bottom-color: #FFFFFF !important; }
+body.dark .cky-preference-title, html.dark .cky-preference-title { color: #FFFFFF !important; }
+body.dark .cky-preference-content-wrapper, html.dark .cky-preference-content-wrapper { color: #FFFFFF !important; }
+body.dark .cky-accordion-header-wrapper, html.dark .cky-accordion-header-wrapper { background-color: #241b2b !important; color: #FFFFFF !important; }
+body.dark .cky-accordion-btn, html.dark .cky-accordion-btn { color: #FFFFFF !important; }
+body.dark .cky-accordion-header-des p, html.dark .cky-accordion-header-des p { color: #FFFFFF !important; }
+body.dark .cky-btn-revisit img, html.dark .cky-btn-revisit img { filter: invert(1) !important; }
+body:not(.dark) .cky-btn-revisit img, html:not(.dark) .cky-btn-revisit img { filter: invert(0) !important; }
+body.dark .cky-modal *, html.dark .cky-modal * { color: #FFFFFF !important; }
+body.dark .cky-footer-wrapper, html.dark .cky-footer-wrapper { background-color: #241b2b !important; border-top-color: #FFFFFF !important; }
+body.dark .cky-horizontal-separator, html.dark .cky-horizontal-separator { background-color: #FFFFFF !important; }
+body.dark .cky-accordion-body, html.dark .cky-accordion-body { background-color: #2a2a2a !important; border-top-color: #FFFFFF !important; }
+body.dark .cky-audit-table, html.dark .cky-audit-table { background-color: #2a2a2a !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
+body.dark .cky-footer-wrapper .cky-btn, html.dark .cky-footer-wrapper .cky-btn { background-color: #C25A3A !important; color: #FFFFFF !important; border-color: #FFFFFF !important; }
+body.dark .cky-footer-wrapper .cky-btn-reject, html.dark .cky-footer-wrapper .cky-btn-reject { background-color: #736134 !important; }
