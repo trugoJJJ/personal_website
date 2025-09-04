@@ -2,89 +2,74 @@
 
 /* ================== CUSTOMIZACJA BANERA COOKIEYES ================== */
 
-/* Ukrycie logo CookieYes */
-#cookieyes-banner .cy-logo,
-#cookieyes-banner .cy-logo-container {
-  display: none !important;
-}
+/* ================== GŁÓWNY BANER COOKIES ================== */
 
 /* Główny kontener banera */
-#cookieyes-banner {
+.cky-consent-container {
   border-radius: 0 !important; /* Kanciaste rogi */
   border: 3px solid #000000 !important; /* Gruby stroke */
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
   font-family: 'Inter', sans-serif !important;
+  max-width: 90vw !important;
+  margin: 1rem !important;
 }
 
-/* Light mode */
-#cookieyes-banner {
+/* Light mode - główny baner */
+.cky-consent-container {
   background-color: #FFFFFF !important;
   color: #2E2217 !important;
 }
 
-/* Dark mode */
-.dark #cookieyes-banner {
+/* Dark mode - główny baner */
+.dark .cky-consent-container {
   background-color: #0B0B10 !important;
   color: #FFFFFF !important;
   border-color: #FFFFFF !important;
 }
 
-/* Nagłówek banera */
-#cookieyes-banner .cy-banner-header {
-  border-bottom: 3px solid #000000 !important;
+/* Treść banera */
+.cky-notice-content-wrapper {
   padding: 1.5rem !important;
 }
 
-.dark #cookieyes-banner .cy-banner-header {
-  border-bottom-color: #FFFFFF !important;
-}
-
-#cookieyes-banner .cy-banner-title {
+/* Tytuł banera */
+.cky-title {
   font-weight: 800 !important;
   font-size: 1.25rem !important;
   line-height: 1.2 !important;
   text-transform: uppercase !important;
   letter-spacing: -0.025em !important;
-}
-
-#cookieyes-banner .cy-banner-description {
-  font-size: 0.875rem !important;
-  line-height: 1.5 !important;
-  margin-top: 0.5rem !important;
-}
-
-/* Treść banera */
-#cookieyes-banner .cy-banner-content {
-  padding: 1.5rem !important;
-}
-
-#cookieyes-banner .cy-banner-text {
-  font-size: 0.875rem !important;
-  line-height: 1.6 !important;
   margin-bottom: 1rem !important;
 }
 
-/* Przyciski */
-#cookieyes-banner .cy-banner-buttons {
+/* Opis banera */
+.cky-notice-des p {
+  font-size: 0.875rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* Kontener przycisków */
+.cky-notice-btn-wrapper {
   display: flex !important;
   flex-direction: column !important;
   gap: 0.75rem !important;
-  padding: 1.5rem !important;
+  padding-top: 1.5rem !important;
   border-top: 3px solid #000000 !important;
 }
 
-.dark #cookieyes-banner .cy-banner-buttons {
+.dark .cky-notice-btn-wrapper {
   border-top-color: #FFFFFF !important;
 }
 
 @media (min-width: 640px) {
-  #cookieyes-banner .cy-banner-buttons {
+  .cky-notice-btn-wrapper {
     flex-direction: row !important;
   }
 }
 
-/* Przycisk "Tylko niezbędne" */
-#cookieyes-banner .cy-btn-secondary {
+/* Przycisk "Dostosuj" */
+.cky-btn-customize {
   background-color: #FFFFFF !important;
   color: #000000 !important;
   border: 3px solid #000000 !important;
@@ -98,20 +83,44 @@
   flex: 1 !important;
 }
 
-.dark #cookieyes-banner .cy-btn-secondary {
+.dark .cky-btn-customize {
   background-color: #0B0B10 !important;
   color: #FFFFFF !important;
   border-color: #FFFFFF !important;
 }
 
-#cookieyes-banner .cy-btn-secondary:hover {
+.cky-btn-customize:hover {
   background-color: #736134 !important;
   color: #FFFFFF !important;
   transform: translateY(-2px) !important;
 }
 
-/* Przycisk "Akceptuj wszystkie" */
-#cookieyes-banner .cy-btn-primary {
+/* Przycisk "Odrzuć wszystkie" */
+.cky-btn-reject {
+  background-color: #736134 !important;
+  color: #FFFFFF !important;
+  border: 3px solid #000000 !important;
+  border-radius: 0 !important;
+  padding: 0.75rem 1.5rem !important;
+  font-weight: 800 !important;
+  font-size: 0.875rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.025em !important;
+  transition: all 0.3s ease !important;
+  flex: 1 !important;
+}
+
+.dark .cky-btn-reject {
+  border-color: #FFFFFF !important;
+}
+
+.cky-btn-reject:hover {
+  background-color: #D8A23A !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Przycisk "Akceptuj wszystko" */
+.cky-btn-accept {
   background-color: #C25A3A !important;
   color: #FFFFFF !important;
   border: 3px solid #000000 !important;
@@ -125,72 +134,415 @@
   flex: 1 !important;
 }
 
-.dark #cookieyes-banner .cy-btn-primary {
+.dark .cky-btn-accept {
   border-color: #FFFFFF !important;
 }
 
-#cookieyes-banner .cy-btn-primary:hover {
+.cky-btn-accept:hover {
   background-color: #D8A23A !important;
   transform: translateY(-2px) !important;
 }
 
-/* Linki w banerze */
-#cookieyes-banner .cy-banner-link {
-  color: #C25A3A !important;
-  text-decoration: underline !important;
-  font-weight: 600 !important;
-}
+/* ================== PRZYCISK REVISIT (PREFERENCJE) ================== */
 
-.dark #cookieyes-banner .cy-banner-link {
-  color: #6B2D5B !important;
-}
-
-#cookieyes-banner .cy-banner-link:hover {
-  opacity: 0.8 !important;
-}
-
-/* Responsywność */
-@media (max-width: 640px) {
-  #cookieyes-banner {
-    margin: 1rem !important;
-    border-width: 2px !important;
-  }
-  
-  #cookieyes-banner .cy-banner-header,
-  #cookieyes-banner .cy-banner-content,
-  #cookieyes-banner .cy-banner-buttons {
-    padding: 1rem !important;
-  }
-  
-  #cookieyes-banner .cy-banner-title {
-    font-size: 1.125rem !important;
-  }
-}
-
-/* Ukrycie domyślnych animacji CookieYes */
-#cookieyes-banner * {
-  animation: none !important;
+/* Kontener przycisku revisit */
+.cky-btn-revisit-wrapper {
+  border-radius: 0 !important;
+  border: 3px solid #000000 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
   transition: all 0.3s ease !important;
 }
 
-/* Custom scrollbar dla banera */
-#cookieyes-banner ::-webkit-scrollbar {
+.dark .cky-btn-revisit-wrapper {
+  border-color: #FFFFFF !important;
+}
+
+.cky-btn-revisit-wrapper:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Przycisk revisit */
+.cky-btn-revisit {
+  background-color: #FFFFFF !important;
+  border: none !important;
+  padding: 0.75rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.dark .cky-btn-revisit {
+  background-color: #0B0B10 !important;
+}
+
+.cky-btn-revisit img {
+  width: 20px !important;
+  height: 20px !important;
+  filter: invert(0) !important;
+}
+
+.dark .cky-btn-revisit img {
+  filter: invert(1) !important;
+}
+
+/* ================== MODAL PREFERENCJI ================== */
+
+/* Główny modal */
+.cky-modal {
+  z-index: 9999 !important;
+}
+
+/* Kontener preferencji */
+.cky-preference-center {
+  border-radius: 0 !important;
+  border: 3px solid #000000 !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25) !important;
+  font-family: 'Inter', sans-serif !important;
+  max-width: 90vw !important;
+  max-height: 90vh !important;
+}
+
+.dark .cky-preference-center {
+  border-color: #FFFFFF !important;
+  background-color: #0B0B10 !important;
+  color: #FFFFFF !important;
+}
+
+/* Header modala */
+.cky-preference-header {
+  padding: 1.5rem !important;
+  border-bottom: 3px solid #000000 !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.dark .cky-preference-header {
+  border-bottom-color: #FFFFFF !important;
+}
+
+/* Tytuł modala */
+.cky-preference-title {
+  font-weight: 800 !important;
+  font-size: 1.5rem !important;
+  line-height: 1.2 !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.025em !important;
+}
+
+/* Przycisk zamknięcia */
+.cky-btn-close {
+  background: none !important;
+  border: none !important;
+  padding: 0.5rem !important;
+  cursor: pointer !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.cky-btn-close:hover {
+  opacity: 0.7 !important;
+}
+
+.cky-btn-close img {
+  width: 20px !important;
+  height: 20px !important;
+  filter: invert(0) !important;
+}
+
+.dark .cky-btn-close img {
+  filter: invert(1) !important;
+}
+
+/* Treść modala */
+.cky-preference-content-wrapper {
+  padding: 1.5rem !important;
+}
+
+.cky-preference-content-wrapper p {
+  font-size: 0.875rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Separator */
+.cky-horizontal-separator {
+  height: 3px !important;
+  background-color: #000000 !important;
+  margin: 1rem 0 !important;
+}
+
+.dark .cky-horizontal-separator {
+  background-color: #FFFFFF !important;
+}
+
+/* ================== AKORDION KATEGORII ================== */
+
+/* Kontener akordionu */
+.cky-accordion-wrapper {
+  padding: 0 1.5rem 1.5rem !important;
+}
+
+/* Pojedynczy akordion */
+.cky-accordion {
+  border: 2px solid #000000 !important;
+  border-radius: 0 !important;
+  margin-bottom: 1rem !important;
+  overflow: hidden !important;
+}
+
+.dark .cky-accordion {
+  border-color: #FFFFFF !important;
+}
+
+/* Header akordionu */
+.cky-accordion-header-wrapper {
+  padding: 1rem !important;
+  background-color: #FAF6EE !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.dark .cky-accordion-header-wrapper {
+  background-color: #241b2b !important;
+}
+
+.cky-accordion-header-wrapper:hover {
+  background-color: #D8A23A !important;
+}
+
+.dark .cky-accordion-header-wrapper:hover {
+  background-color: #3A245A !important;
+}
+
+/* Tytuł kategorii */
+.cky-accordion-btn {
+  background: none !important;
+  border: none !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.025em !important;
+  cursor: pointer !important;
+  width: 100% !important;
+  text-align: left !important;
+  color: inherit !important;
+}
+
+/* Opis kategorii */
+.cky-accordion-header-des p {
+  font-size: 0.75rem !important;
+  line-height: 1.5 !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0 !important;
+}
+
+/* Status "Zawsze aktywne" */
+.cky-always-active {
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  color: #008000 !important;
+  margin-left: 1rem !important;
+}
+
+/* Chevron */
+.cky-accordion-chevron {
+  position: absolute !important;
+  right: 1rem !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  transition: transform 0.3s ease !important;
+}
+
+.cky-accordion-item[aria-expanded="true"] .cky-accordion-chevron {
+  transform: translateY(-50%) rotate(90deg) !important;
+}
+
+/* Treść akordionu */
+.cky-accordion-body {
+  padding: 1rem !important;
+  background-color: #f4f4f4 !important;
+  border-top: 1px solid #000000 !important;
+}
+
+.dark .cky-accordion-body {
+  background-color: #2a2a2a !important;
+  border-top-color: #FFFFFF !important;
+}
+
+/* Tabela audytu */
+.cky-audit-table {
+  font-size: 0.75rem !important;
+  line-height: 1.4 !important;
+}
+
+.cky-empty-cookies-text {
+  font-style: italic !important;
+  color: #666 !important;
+}
+
+.dark .cky-empty-cookies-text {
+  color: #aaa !important;
+}
+
+/* ================== FOOTER MODALA ================== */
+
+/* Footer wrapper */
+.cky-footer-wrapper {
+  border-top: 3px solid #000000 !important;
+  padding: 1.5rem !important;
+  background-color: #FAF6EE !important;
+}
+
+.dark .cky-footer-wrapper {
+  border-top-color: #FFFFFF !important;
+  background-color: #241b2b !important;
+}
+
+/* Cień footer */
+.cky-footer-shadow {
+  display: none !important;
+}
+
+/* Kontener przycisków footer */
+.cky-prefrence-btn-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.75rem !important;
+  margin-bottom: 1rem !important;
+}
+
+@media (min-width: 640px) {
+  .cky-prefrence-btn-wrapper {
+    flex-direction: row !important;
+  }
+}
+
+/* Przyciski w footer */
+.cky-footer-wrapper .cky-btn {
+  background-color: #C25A3A !important;
+  color: #FFFFFF !important;
+  border: 3px solid #000000 !important;
+  border-radius: 0 !important;
+  padding: 0.75rem 1.5rem !important;
+  font-weight: 800 !important;
+  font-size: 0.875rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.025em !important;
+  transition: all 0.3s ease !important;
+  flex: 1 !important;
+}
+
+.dark .cky-footer-wrapper .cky-btn {
+  border-color: #FFFFFF !important;
+}
+
+.cky-footer-wrapper .cky-btn:hover {
+  background-color: #D8A23A !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Przycisk "Odrzuć wszystkie" w footer */
+.cky-footer-wrapper .cky-btn-reject {
+  background-color: #736134 !important;
+}
+
+.cky-footer-wrapper .cky-btn-reject:hover {
+  background-color: #D8A23A !important;
+}
+
+/* ================== LINK "POKAŻ WIĘCEJ" ================== */
+
+.cky-show-desc-btn {
+  background: none !important;
+  border: none !important;
+  color: #C25A3A !important;
+  text-decoration: underline !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: inherit !important;
+}
+
+.dark .cky-show-desc-btn {
+  color: #6B2D5B !important;
+}
+
+.cky-show-desc-btn:hover {
+  opacity: 0.8 !important;
+}
+
+/* ================== UKRYCIE "POWERED BY" ================== */
+
+/* Ukrycie logo CookieYes w głównym banerze */
+.cky-consent-container [data-cky-tag="powered-by"] {
+  display: none !important;
+}
+
+/* Ukrycie logo CookieYes w modalu */
+.cky-modal [data-cky-tag="detail-powered-by"] {
+  display: none !important;
+}
+
+/* ================== RESPONSYWNOŚĆ ================== */
+
+@media (max-width: 640px) {
+  .cky-consent-container {
+    margin: 0.5rem !important;
+    border-width: 2px !important;
+  }
+  
+  .cky-notice-content-wrapper,
+  .cky-preference-header,
+  .cky-preference-content-wrapper,
+  .cky-accordion-wrapper,
+  .cky-footer-wrapper {
+    padding: 1rem !important;
+  }
+  
+  .cky-title,
+  .cky-preference-title {
+    font-size: 1.125rem !important;
+  }
+  
+  .cky-notice-btn-wrapper,
+  .cky-prefrence-btn-wrapper {
+    flex-direction: column !important;
+  }
+}
+
+/* ================== ANIMACJE I TRANSITIONS ================== */
+
+/* Smooth transitions dla wszystkich elementów */
+.cky-consent-container *,
+.cky-modal * {
+  transition: all 0.3s ease !important;
+}
+
+/* Hover effects */
+.cky-accordion-header-wrapper:hover,
+.cky-btn:hover {
+  transform: translateY(-2px) !important;
+}
+
+/* ================== CUSTOM SCROLLBAR ================== */
+
+.cky-modal ::-webkit-scrollbar {
   width: 8px !important;
 }
 
-#cookieyes-banner ::-webkit-scrollbar-track {
+.cky-modal ::-webkit-scrollbar-track {
   background: #f1f1f1 !important;
 }
 
-.dark #cookieyes-banner ::-webkit-scrollbar-track {
+.dark .cky-modal ::-webkit-scrollbar-track {
   background: #2a2a2a !important;
 }
 
-#cookieyes-banner ::-webkit-scrollbar-thumb {
+.cky-modal ::-webkit-scrollbar-thumb {
   background: #C25A3A !important;
   border-radius: 0 !important;
 }
 
-#cookieyes-banner ::-webkit-scrollbar-thumb:hover {
+.cky-modal ::-webkit-scrollbar-thumb:hover {
   background: #D8A23A !important;
 }
