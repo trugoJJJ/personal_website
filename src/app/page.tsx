@@ -1,5 +1,6 @@
 "use client";
 
+// Vercel deployment trigger - minor update
 import dynamic from 'next/dynamic';
 
 const Index = dynamic(() => import("@/components/pages/Index"), {
