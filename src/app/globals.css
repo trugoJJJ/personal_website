@@ -652,3 +652,58 @@ body.dark .cky-footer-wrapper .cky-btn-reject[style*="background-color: #1863dc"
 .cky-footer-wrapper button { pointer-events: auto !important; cursor: pointer !important; }
 .cky-btn-close { pointer-events: auto !important; cursor: pointer !important; z-index: 10001 !important; }
 .cky-show-desc-btn { pointer-events: auto !important; cursor: pointer !important; }
+/* ================== NAPRAWKA HIERARCHII Z-INDEX ================== */
+:root { --brand-orange: #C25A3A; --dark-bg: #0B0B10; }
+/* MODAL ma być najwyżej */
+.cky-preference-center, .cky-modal, #cookieyesPreferenceCenter { position: fixed !important; z-index: 2147483646 !important; }
+/* Tło pod spodem, ale nie nad treścią */
+.cky-overlay, .cky-preference-overlay { position: fixed !important; z-index: 2147483645 !important; pointer-events: auto !important; }
+/* Gdy modal jest otwarty – wyłącz interakcje z "lepionymi" headerami itd. */
+html.cky-modal-open .site-header, html.cky-modal-open .sticky, html.cky-modal-open [style*="position: fixed"] { pointer-events: none !important; }
+/* Jeśli któryś przodek tworzy stacking context i przebija modal */
+.site-header, .sticky { transform: none !important; filter: none !important; perspective: none !important; }
+/* ================== NAPRAWKA REVISIT BUTTON ================== */
+.cky-btn-revisit { background: var(--brand-orange) !important; border: 2px solid currentColor !important; border-radius: 8px !important; }
+html.dark .cky-btn-revisit, body.dark .cky-btn-revisit { background: var(--dark-bg) !important; }
+/* Kolor ikonki */
+html:not(.dark) .cky-btn-revisit svg, html:not(.dark) .cky-btn-revisit img { filter: invert(0) !important; }
+html.dark .cky-btn-revisit svg, html.dark .cky-btn-revisit img { filter: invert(1) !important; }
+/* ================== NAPRAWKA PANELU PREFERENCJI DARK MODE ================== */
+html.dark .cky-preference-center, body.dark .cky-preference-center { background: #0B0B10 !important; color: #FFFFFF !important; }
+/* ================== USUWANIE STARYCH STYLI ================== */
+/* Nadpisujemy stare style które mogły powodować konflikty */
+.cky-preference-center { pointer-events: auto !important; }
+.cky-modal { pointer-events: auto !important; }
+/* ================== BEZPIECZNE NADPISANIA COOKIEYES ================== */
+/* 1) Kolejność i specyficzność - umieszczamy po skrypcie CookieYes */
+/* Unikamy selektorów [style*="..."] - są kruche */
+/* 2) Klikalność - z-index + pointer-events tylko tam, gdzie trzeba */
+/* Modal i jego kontent zawsze najwyżej */
+.cky-preference-center, .cky-modal, #cookieyesPreferenceCenter { position: fixed !important; z-index: 2147483646 !important; }
+/* Overlay tuż pod modalem – może łapać klik do zamykania */
+.cky-overlay, .cky-preference-overlay { position: fixed !important; z-index: 2147483645 !important; pointer-events: auto !important; }
+/* Gdy CookieYes otwiera modal, zablokuj kliki w stałe elementy strony */
+html.cky-modal-open .site-header, html.cky-modal-open .sticky, html.cky-modal-open [style*="position:fixed"] { pointer-events: none !important; }
+/* Zapobieganie nowym stacking contextom nad modalem */
+.site-header, .sticky { transform: none !important; filter: none !important; perspective: none !important; }
+/* 3) Dark mode panel (czarne tło + białe teksty) */
+html.dark .cky-preference-center, body.dark .cky-preference-center { background: #0B0B10 !important; color: #FFFFFF !important; }
+html.dark .cky-preference-center *, body.dark .cky-preference-center * { color: #FFFFFF !important; border-color: #FFFFFF33 !important; }
+/* 4) Revisit — tło i równy "stroke" */
+:root { --brand-orange: #C25A3A; --dark-bg: #0B0B10; }
+/* Light: ciemniejszy pomarańcz z palety */
+.cky-btn-revisit { background: var(--brand-orange) !important; border: 2px solid currentColor !important; border-radius: 8px !important; }
+/* Dark: ciemne tło */
+html.dark .cky-btn-revisit, body.dark .cky-btn-revisit { background: var(--dark-bg) !important; }
+/* Ikonka: czarna w light, biała w dark */
+html:not(.dark) .cky-btn-revisit svg, html:not(.dark) .cky-btn-revisit img { filter: invert(0) !important; }
+html.dark .cky-btn-revisit svg, html.dark .cky-btn-revisit img { filter: invert(1) !important; }
+/* 5) Najczęstsza przyczyna "nie-klikania" */
+/* Nie tyle same style CookieYes, co Twoje nadpisania (transform na headerze, wysoki z-index sticky, globalne pointer-events) */
+/* tworzą nowe konteksty i "przykrywają" modal. Dlatego: */
+/* Modal najwyżej (patrz punkt 2), */
+/* Wyłącz kliki w sticky/fixed tylko gdy modal jest otwarty (.cky-modal-open), */
+/* Unikaj masowego pointer-events: none/auto bez warunku. */
+/* ================== USUWANIE STARYCH PROBLEMATYCZNYCH STYLI ================== */
+/* Usuwamy stare style które mogły powodować konflikty */
+/* Nadpisujemy tylko to co konieczne, bez "rycia w klikach" */
