@@ -49,19 +49,16 @@ const LanguageSwitchContent = () => {
   const getEnglishUrl = () => {
     console.log('Current pathname:', pathname); // Debug log
     console.log('Pathname type:', typeof pathname); // Debug log
-    console.log('Current theme:', isDark ? 'dark' : 'light'); // Debug log
     
-    if (!pathname) return `https://galecki.site/?theme=${isDark ? 'dark' : 'light'}`; // Handle undefined case
+    if (!pathname) return 'https://galecki.site/'; // Handle undefined case
     
-    const themeParam = `?theme=${isDark ? 'dark' : 'light'}`;
-    
-    if (pathname === "/") return `https://galecki.site/${themeParam}`;
-    if (pathname === "/polityka-prywatnosci") return `https://galecki.site/privacy-policy${themeParam}`;
+    if (pathname === "/") return 'https://galecki.site/';
+    if (pathname === "/polityka-prywatnosci") return 'https://galecki.site/privacy-policy';
     if (pathname.startsWith("/portfolio/")) {
       // Keep the same portfolio path for English version
-      return `https://galecki.site${pathname}${themeParam}`;
+      return `https://galecki.site${pathname}`;
     }
-    return `https://galecki.site/${themeParam}`;
+    return 'https://galecki.site/';
   };
 
   const baseBtn = "rounded-none font-extrabold select-none transition-colors";
@@ -154,7 +151,7 @@ export const LanguageSwitch = () => {
           PL
         </div>
         <a 
-          href="https://galecki.site/?theme=light"
+          href="https://galecki.site/"
           className="rounded-none font-extrabold select-none transition-colors hover:opacity-80"
           style={{
             border: `3px solid ${LIGHT.black}`,

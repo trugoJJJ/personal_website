@@ -1,5 +1,4 @@
 // Test czy script się ładuje
-alert('Theme switcher loaded!');
 console.log('=== THEME SWITCHER LOADED ===');
 
 function switchTheme() {
