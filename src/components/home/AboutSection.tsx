@@ -3,6 +3,7 @@
 import React from "react";
 import { usePalette } from "./hooks";
 import portrait from "@/assets/hero-portrait.jpg";
+import { CVPopup } from "../CVPopup";
 
 export const AboutSection = () => {
   const { isDark, P } = usePalette();
@@ -109,8 +110,9 @@ export const AboutSection = () => {
                               </g>
                             </svg>
                           ),
-                          href: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+                          href: null,
                           label: "CV",
+                          isCV: true,
                         },
                         {
                           Icon: (props: any) => (
@@ -130,17 +132,13 @@ export const AboutSection = () => {
                           href: "https://www.upwork.com/freelancers/~0170962b0b448c7ac5?mp_source=share",
                           label: "UpWork",
                         },
-                      ].map(({ Icon, href, label }, i) => {
+                      ].map(({ Icon, href, label, isCV }, i) => {
                         const baseBg = isDark ? P("charcoal") : P("white");
                         const baseColor = isDark ? P("white") : P("black");
-                        return (
-                          <a
-                            key={i}
-                            href={href}
-                            target="_blank"
-                            rel="noreferrer"
-                            aria-label={label}
-                            className="group w-full aspect-square flex items-center justify-center transition-transform duration-300 ease-out focus-visible:outline-none"
+                        
+                        const buttonContent = (
+                          <div
+                            className="group w-full aspect-square flex items-center justify-center transition-transform duration-300 ease-out focus-visible:outline-none cursor-pointer"
                             style={{
                               border: `3px solid ${isDark ? P("white") : P("black")}`,
                               background: baseBg,
@@ -161,6 +159,26 @@ export const AboutSection = () => {
                             }}
                           >
                             <Icon className="h-8 w-8 md:h-6 md:w-6" />
+                          </div>
+                        );
+
+                        if (isCV) {
+                          return (
+                            <CVPopup key={i}>
+                              {buttonContent}
+                            </CVPopup>
+                          );
+                        }
+
+                        return (
+                          <a
+                            key={i}
+                            href={href}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label={label}
+                          >
+                            {buttonContent}
                           </a>
                         );
                       })}

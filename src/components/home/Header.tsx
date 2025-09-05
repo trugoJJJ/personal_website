@@ -8,6 +8,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 import { usePalette } from "./hooks";
 import { ClientOnlyWrapper } from "../ClientOnlyWrapper";
 import { useRouter, usePathname } from "next/navigation";
+import { CVPopup } from "../CVPopup";
 
 const links = [
   { section: "portfolio", label: "Portfolio" },
@@ -211,8 +212,9 @@ const HeaderContent = () => {
                         </g>
                       </svg>
                     ),
-                    href: "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+                    href: null,
                     label: "CV",
+                    isCV: true,
                   },
                   {
                     Icon: (props: any) => (
@@ -232,17 +234,13 @@ const HeaderContent = () => {
                     href: "https://www.upwork.com/freelancers/~0170962b0b448c7ac5?mp_source=share",
                     label: "UpWork",
                   },
-                ].map(({ Icon, href, label }, i) => {
+                ].map(({ Icon, href, label, isCV }, i) => {
                   const baseBg = isDark ? P("charcoal") : P("white");
                   const baseColor = isDark ? P("white") : P("black");
-                  return (
-                    <a
-                      key={i}
-                      href={href}
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label={label}
-                      className="h-12 w-full flex items-center justify-center transition-transform duration-200 hover:scale-105"
+                  
+                  const buttonContent = (
+                    <div
+                      className="h-12 w-full flex items-center justify-center transition-transform duration-200 hover:scale-105 cursor-pointer"
                       style={{
                         border: `1px solid ${isDark ? P("white") : P("black")}`,
                         background: baseBg,
@@ -250,6 +248,26 @@ const HeaderContent = () => {
                       }}
                     >
                       <Icon className="h-4 w-4" />
+                    </div>
+                  );
+
+                  if (isCV) {
+                    return (
+                      <CVPopup key={i}>
+                        {buttonContent}
+                      </CVPopup>
+                    );
+                  }
+
+                  return (
+                    <a
+                      key={i}
+                      href={href}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={label}
+                    >
+                      {buttonContent}
                     </a>
                   );
                 })}
