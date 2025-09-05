@@ -32,8 +32,7 @@ export const AboutSection = () => {
             <div className="space-y-6" style={{ color: isDark ? P("white") : P("charcoal") }}>
               <h3 className="text-2xl md:text-3xl font-extrabold text-left">Cześć, nazywam się Adam</h3>
               <p className="text-base md:text-lg">
-                Zajmuję się kompleksową obsługą komunikacji marketingowej nakierowanej na osiąganie zamierzonych celów biznesowych.
-              </p>
+                Pomagam firmom B2B i usługowym w budowaniu skutecznej komunikacji marketingowej. Łączę działania kreatywne z umiejętnościami strategicznymi w planowaniu i prowadzeniu i analizowaniu kampanii.</p>
               <p className="text-base md:text-lg">
                 Przez ostatnie 5&nbsp;lat rozwijałem się w&nbsp;marketingu –&nbsp;od grafika,&nbsp;przez specjalistę SEO,&nbsp;po managera zespołu.
                 Realizowałem długoterminowe strategie marketingowe dla różnych branż (IT,&nbsp;produkcyjna,&nbsp;medyczna,&nbsp;krypto). Zarządzałem zespołem i&nbsp;wspierałem projekty IT oraz marketingowe dla największych marek w&nbsp;Polsce.
