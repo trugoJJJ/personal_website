@@ -262,7 +262,7 @@ const HeaderContent = () => {
                   return (
                     <a
                       key={i}
-                      href={href}
+                      href={href || undefined}
                       target="_blank"
                       rel="noreferrer"
                       aria-label={label}

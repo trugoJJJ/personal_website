@@ -116,7 +116,7 @@ const FooterSectionContent = () => {
                   return (
                     <a
                       key={i}
-                      href={href}
+                      href={href || undefined}
                       {...(ext ? { target: '_blank', rel: 'noreferrer nofollow' } : {})}
                       aria-label={label}
                     >
