@@ -33,7 +33,19 @@ export const CVPopup = ({ children }: CVPopupProps) => {
   };
 
   const handleViewPDF = () => {
+    // Otwórz w nowej karcie
     window.open('/adam_galecki_cv.pdf', '_blank');
+    
+    // Automatycznie pobierz CV
+    setTimeout(() => {
+      const link = document.createElement('a');
+      link.href = '/adam_galecki_cv.pdf';
+      link.download = 'Adam_Galecki_CV.pdf';
+      link.target = '_blank';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }, 500); // Małe opóźnienie, żeby karta się otworzyła
   };
 
   const handleClick = () => {
