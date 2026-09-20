@@ -80,6 +80,8 @@ const EN: Dict = {
   "articles.newsletter.cta": "Subscribe to newsletter",
 };
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// @ts-expect-error - słowniki zachowane na potrzeby przyszłej wersji wielojęzycznej
 const DICTS: Record<Locale, Dict> = { pl: PL, en: EN };
 
 const I18nContext = createContext<I18nContextType | null>(null);

@@ -46,35 +46,35 @@ export const articles: Article[] = [
   },
   {
     id: 1,
-    title: "Jak dodać Google Maps do swojej strony internetowej?",
-    description: "Jak uzyskać i skonfigurować klucz API do Google Maps",
-    image: "/google_maps.png",
+    title: "7 ways I actually wire AI into my marketing work",
+    description: "The boring practical stuff, not the hype",
+    image: "/medium_ai_marketing.jpg",
     readTime: "3 min",
-    publishDate: "2023",
-    category: "Strony internetowe",
-    link: "https://dogtronic.io/baza-wiedzy/blog/klucz-api-do-google-maps/",
-    excerpt: "Kompletny przewodnik uzyskania i konfiguracji klucza API do Google Maps. Dowiedz się, jak bezpiecznie korzystać z usług Google Maps."
+    publishDate: "2026",
+    category: "AI/Marketing",
+    link: "https://medium.com/@a.galecki/7-ways-i-actually-wire-ai-into-my-marketing-work-the-boring-practical-stuff-not-the-hype-e295d988449f",
+    excerpt: "None of it is magic. It's just removing the parts of the job that don't need a human."
   },
   {
     id: 2,
-    title: "Historia komputerów i programowania",
-    description: "Od maszyn liczących do sztucznej inteligencji",
-    image: "/pierwszy_komputer.png",
-    readTime: "12 min",
-    publishDate: "8 styczeń 2024",
-    category: "Programowanie",
-    link: "https://dogtronic.io/baza-wiedzy/blog/historia-komputerow-i-programowania/",
-    excerpt: "Fascynująca podróż przez historię komputerów i programowania - od pierwszych maszyn liczących do zcasów współczesnych."
+    title: "I made the same AI compete against itself in SEO tasks",
+    description: "Ten sam model, jedna różnica: dostęp do danych na żywo",
+    image: "/medium_ai_seo_compete.jpg",
+    readTime: "7 min",
+    publishDate: "2026",
+    category: "SEO/AI",
+    link: "https://medium.com/@a.galecki/i-made-the-same-ai-compete-against-itself-in-seo-tasks-9f973a3ee97c",
+    excerpt: "The only difference was the live Google data connection."
   },
   {
     id: 3,
-    title: "Bug i debug - historia testów oprogramowania",
-    description: "Jak ewoluowały metody testowania i debugowania",
-    image: "/bug.png",
-    readTime: "2 min",
-    publishDate: "2023",
-    category: "Programowanie",
-    link: "https://dogtronic.io/baza-wiedzy/blog/bug-i-debug-czyli-historia-testow-oprogramowania/",
-    excerpt: "Poznaj historię bugów i debugowania - od pierwszego błędu po współczesne metody testowania oprogramowania."
+    title: "The Google Sheet I use instead of paying for SEO platform subscription",
+    description: "Arkusz zamiast abonamentu na narzędzie SEO",
+    image: "/medium_google_sheet_seo.jpg",
+    readTime: "5 min",
+    publishDate: "2026",
+    category: "SEO",
+    link: "https://medium.com/@a.galecki/the-google-sheet-i-use-instead-of-paying-for-seo-platform-subscription-de3a9aac813c",
+    excerpt: "Arkusz Google, który pobiera wyniki wyszukiwania dla Twoich słów kluczowych i zamienia je w dashboard: pozycje, konkurenci, trendy."
   }
 ];

@@ -44,6 +44,13 @@ const ExperienceSectionContent = () => {
 
   const jobs = [
     {
+      role: "Project Owner",
+      company: "Senuto",
+      period: "2025 – obecnie",
+      desc: "Odpowiadam za rynkowy rozwój Nodeshub (platforma z danymi dla specjalistów SEO) i ekspansję narzędzia na rynki zagraniczne",
+      url: "https://senuto.com/"
+    },
+    {
       role: "Digital Marketing Specialist",
       company: "Dogtronic",
       period: "2021 – 2025",

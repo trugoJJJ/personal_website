@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" width="1200" height="860" role="img" aria-labelledby="t d">
+  <title id="t">Lejek sprzedażowy Nodeshub</title>
+  <desc id="d">Trzy etapy lejka: TOFU (repozytorium SEO Skills i agent treści), MOFU (rozbudowa nodeshub.io i onboarding), BOFU (konta użytkownika i automatyzacja mailowa). Efekt: x4 wzrost sprzedaży kwartał do kwartału.</desc>
+
+  <style>
+    .lbl  { font-family: Lexend, Figtree, system-ui, sans-serif; font-weight: 800; }
+    .body { font-family: Figtree, system-ui, sans-serif; font-weight: 600; }
+    .mono { font-family: "Geist Mono", ui-monospace, monospace; font-weight: 700; }
+    .head { font-size: 21px; }
+    .txt  { font-size: 15px; }
+    .tiny { font-size: 13px; }
+    .cap  { font-size: 11px; letter-spacing: .16em; }
+  </style>
+
+  <rect width="1200" height="860" fill="#FAF6EE"/>
+
+  <!-- nagłówek -->
+  <text x="60" y="62" class="lbl" font-size="26" fill="#2E2217">LEJEK SPRZEDAŻOWY NODESHUB</text>
+  <text x="60" y="88" class="body tiny" fill="#736134">Kanały organiczne · budżet bliski zeru · grupa docelowa: developerzy i agencje SEO</text>
+  <line x1="60" y1="106" x2="1140" y2="106" stroke="#2E2217" stroke-width="3"/>
+
+  <!-- ================= TOFU ================= -->
+  <g>
+    <!-- znacznik etapu OBOK lejka -->
+    <rect x="60" y="150" width="128" height="52" fill="#C25A3A" stroke="#000" stroke-width="3"/>
+    <text x="124" y="184" class="lbl" font-size="24" fill="#FFFFFF" text-anchor="middle">TOFU</text>
+    <text x="124" y="220" class="body cap" fill="#736134" text-anchor="middle">ŚWIADOMOŚĆ</text>
+
+    <!-- trapez -->
+    <path d="M 220 148 L 1140 148 L 1062 300 L 298 300 Z" fill="#C25A3A" stroke="#000" stroke-width="4"/>
+    <text x="680" y="196" class="lbl head" fill="#FFFFFF" text-anchor="middle">Repozytorium SEO Skills (Claude Code)</text>
+    <text x="680" y="232" class="body txt" fill="#FFFFFF" text-anchor="middle" opacity=".95">Publiczny asset dla społeczności AI/dev — 40 ★ na GitHubie</text>
+    <text x="680" y="264" class="body txt" fill="#FFFFFF" text-anchor="middle" opacity=".95">Agent treści: Reddit · Hacker News · X · Medium · LinkedIn</text>
+  </g>
+
+  <path d="M 680 300 L 680 336 M 664 322 L 680 340 L 696 322" stroke="#2E2217" stroke-width="4" fill="none"/>
+
+  <!-- ================= MOFU ================= -->
+  <g>
+    <rect x="60" y="360" width="128" height="52" fill="#D8A23A" stroke="#000" stroke-width="3"/>
+    <text x="124" y="394" class="lbl" font-size="24" fill="#2E2217" text-anchor="middle">MOFU</text>
+    <text x="124" y="430" class="body cap" fill="#736134" text-anchor="middle">ROZWAŻANIE</text>
+
+    <path d="M 298 358 L 1062 358 L 984 510 L 376 510 Z" fill="#D8A23A" stroke="#000" stroke-width="4"/>
+    <text x="680" y="406" class="lbl head" fill="#2E2217" text-anchor="middle">Rozbudowa nodeshub.io</text>
+    <text x="680" y="442" class="body txt" fill="#2E2217" text-anchor="middle" opacity=".9">Nowe podstrony · uporządkowane sekcje · onboarding</text>
+    <text x="680" y="474" class="body txt" fill="#2E2217" text-anchor="middle" opacity=".9">Rozbudowany cennik · Polityka prywatności i TOS</text>
+  </g>
+
+  <path d="M 680 510 L 680 546 M 664 532 L 680 550 L 696 532" stroke="#2E2217" stroke-width="4" fill="none"/>
+
+  <!-- ================= BOFU ================= -->
+  <g>
+    <rect x="60" y="570" width="128" height="52" fill="#736134" stroke="#000" stroke-width="3"/>
+    <text x="124" y="604" class="lbl" font-size="24" fill="#FFFFFF" text-anchor="middle">BOFU</text>
+    <text x="124" y="640" class="body cap" fill="#736134" text-anchor="middle">KONWERSJA</text>
+
+    <path d="M 376 568 L 984 568 L 906 720 L 454 720 Z" fill="#736134" stroke="#000" stroke-width="4"/>
+    <text x="680" y="616" class="lbl head" fill="#FFFFFF" text-anchor="middle">Konta użytkownika + automatyzacja</text>
+    <text x="680" y="652" class="body txt" fill="#FFFFFF" text-anchor="middle" opacity=".95">Zbieranie maili · onboarding w produkcie</text>
+    <text x="680" y="684" class="body txt" fill="#FFFFFF" text-anchor="middle" opacity=".95">Upsell przy wyczerpywaniu paczki tokenów</text>
+  </g>
+
+  <!-- ================= WYNIK ================= -->
+  <g>
+    <rect x="60" y="762" width="1080" height="76" fill="#FFFFFF" stroke="#000" stroke-width="4"/>
+    <rect x="60" y="762" width="12" height="76" fill="#C25A3A"/>
+
+    <text x="104" y="792" class="body cap" fill="#736134">EFEKT</text>
+    <text x="104" y="820" class="lbl" font-size="19" fill="#2E2217">x4 wzrost sprzedaży kwartał do kwartału</text>
+
+    <line x1="580" y1="776" x2="580" y2="824" stroke="#2E2217" stroke-width="2" opacity=".3"/>
+    <text x="616" y="792" class="body tiny" fill="#2E2217">z ~5 tys. → ~20 tys. PLN</text>
+    <text x="616" y="818" class="body tiny" fill="#736134">rosnące ARPU · wyższa jakość klienta</text>
+
+    <line x1="910" y1="776" x2="910" y2="824" stroke="#2E2217" stroke-width="2" opacity=".3"/>
+    <text x="946" y="792" class="mono tiny" fill="#2E2217">~$30 / mies.</text>
+    <text x="946" y="818" class="body tiny" fill="#736134">koszt sieci agentów AI</text>
+  </g>
+</svg>

@@ -35,7 +35,7 @@ const ArticlesList = () => {
                   rel="noopener noreferrer nofollow"
                   className="text-sm font-medium text-[#C25A3A] hover:opacity-80 transition-opacity mt-12"
                 >
-                  <span className="border-b border-current">Czytaj na: dogtronic.io</span>
+                  <span className="border-b border-current">Czytaj na: {new URL(a.link).hostname.replace(/^www\./, '')}</span>
                 </Link>
                 <Button asChild variant="outline" className="w-full">
                   <Link href={`/articles/${a.id}`} aria-label={`Czytaj więcej: ${a.title}`}>

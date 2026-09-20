@@ -114,20 +114,20 @@ const portfolioProjects: Omit<Project, 'id'>[] = [
   {
     title: 'Landing page promocyjny',
     description: 'Langing page → Projekt → Development → Kampania promocyjna',
-    image: '/saas_projekt.png',
+    image: '/nodeshub_hero.jpg',
     categories: ['Projekty kreatywne'],
     tags: ['Developnet', 'Promocja', 'Designe'],
     metrics: 'Kompleksowe wdrożenie',
-    externalLink: 'https://www.behance.net/gallery/233839349/SaaS-Landing-Page-Project-Implementation-Content'
+    externalLink: 'https://nodeshub.io/'
   },
   {
-    title: 'Interaktywna animacja w Rive',
-    description: 'Interaktywna animacja → Rive Studio → Animacja na stronę',
-    image: '/rive_projekt.png',
-    categories: ['Projekty kreatywne'],
-    tags: ['Rive', 'Interactive', 'Animation'],
-    metrics: 'Dedykowana animacja',
-    externalLink: 'https://rive.app/community/files/23283-43730-interactive-drawing-animation/'
+    title: 'Sprzedaż narzędzia Nodeshub na rynki zagraniczne',
+    description: 'Badanie rynku → Lejek organiczny → Rozwój produktu → Automatyzacja',
+    image: '/nodeshub_projekt.jpg',
+    categories: ['Projekty sprzedażowe'],
+    tags: ['MicroSaaS', 'Growth', 'API'],
+    metrics: 'x4 wzrost sprzedaży',
+    externalLink: 'https://nodeshub.io/'
   },
 ];
 
@@ -183,6 +183,9 @@ function ProjectCard({ project, isHighlighted = false }: { project: Project, isH
     if (url.includes('linkedin.com')) {
       return 'Zobacz na LinkedIn';
     }
+    if (url.includes('nodeshub.io')) {
+      return 'Zobacz na nodeshub.io';
+    }
     // Default fallback
     return 'Zobacz więcej';
   };
@@ -197,6 +200,9 @@ function ProjectCard({ project, isHighlighted = false }: { project: Project, isH
     }
     if (title.includes('System śledzenia') || title.includes('śledzenia danych')) {
       return '/portfolio/analytics';
+    }
+    if (title.includes('Nodeshub')) {
+      return '/portfolio/nodeshub';
     }
     // For projects with external links, use the external link
     if (externalLink) {

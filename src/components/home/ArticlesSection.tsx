@@ -105,7 +105,7 @@ const ArticlesSectionContent = () => {
                   className="text-sm font-medium hover:opacity-80 transition-opacity mt-12"
                   style={{ color: isDark ? P("white") : P("amaranth") }}
                 >
-                  <span className="border-b border-current">Czytaj na: dogtronic.io</span>
+                  <span className="border-b border-current">Czytaj na: {new URL(article.link).hostname.replace(/^www\./, '')}</span>
                 </Link>
                 <Link
                   href={article.link}

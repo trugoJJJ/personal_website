@@ -38,9 +38,9 @@ const SectionHeading = ({ children, id }: { children: React.ReactNode, id?: stri
         external: true,
       },
       {
-        title: "Calendly",
+        title: "Spotkanie",
         text: "Wybierz dogodny termin na rozmowę",
-        href: "https://calendly.com/agalecki-work",
+        href: "https://calendar.app.google/fiTqRcjgWcaausMc6",
         display: "Zarezerwuj spotkanie",
         Icon: CalendarIcon,
       },
@@ -139,7 +139,7 @@ const SectionHeading = ({ children, id }: { children: React.ReactNode, id?: stri
               {[
                 { title: "Email", text: "Odpowiadam zwykle w ciągu 24h", display: "agalecki.work@gmail.com" },
                 { title: "LinkedIn", text: "Połączmy się i porozmawiajmy", display: "linkedin.com/in/adamgalecki" },
-                { title: "Calendly", text: "Wybierz dogodny termin", display: "Zarezerwuj spotkanie" }
+                { title: "Spotkanie", text: "Wybierz dogodny termin", display: "Zarezerwuj spotkanie" }
               ].map((t, i) => (
                 <div
                   key={i}
